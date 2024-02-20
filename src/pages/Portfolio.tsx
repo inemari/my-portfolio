@@ -55,5 +55,5 @@ function Portfolio() {
             </div>
         </section>
     );
-};
+}
 export default Portfolio

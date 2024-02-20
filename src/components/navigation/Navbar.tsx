@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
-import MobileNav from "./MobileNav";
 import NavToggle from "./NavToggle";
 
 const Navbar: React.FC = () => {
