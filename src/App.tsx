@@ -5,7 +5,7 @@ import Navbar from './components/navigation/Navbar'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
-import animationData from './assets/Animation - 1707897135994.json'
+import animationData from './assets/lottieFiles/Animation - 1707897135994.json'
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,7 +13,7 @@ function App() {
   const loadingRef = useRef<LottieRefCurrentProps>(null)
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3300)
+    setTimeout(() => setLoading(false), 1000)
   }, [])
   if (loading) {
     return <div className="flex justify-center items-center flex-col">

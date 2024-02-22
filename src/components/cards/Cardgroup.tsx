@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+
 import Card from './Card';
-import { motion } from "framer-motion"
+
 interface CardItem {
     id: number;
     imageSrc: string;
@@ -22,15 +22,15 @@ const CardGroup: React.FC<CardGroupProps<CardItem>> = ({ items, header }) => {
                 {header}
             </h2>
             <div className='flex flex-col lg:flex-row justify-center gap-20'>
-     
-                        {items.map((item) => (
-                            <Card
-                                key={item.id}
-                                imageSrc={item.imageSrc}
-                                title={item.title}
-                                description={item.description}
-                            />
-                        ))}
+
+                {items.map((item) => (
+                    <Card
+                        key={item.id}
+                        imageSrc={item.imageSrc}
+                        title={item.title}
+                        description={item.description}
+                    />
+                ))}
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import illustration from '../assets/images/mv-campaign.jpg';
-import AnimatedText from "./animated/AnimatedText";
+import AnimatedText from "./textanimations/TypeWriter";
 function Hero() {
 
     return (
