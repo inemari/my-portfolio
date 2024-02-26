@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { m, useAnimation } from "framer-motion";
 
 interface NavToggleProps {
   isMenuOpen: boolean;
@@ -23,7 +23,7 @@ const NavToggle: React.FC<NavToggleProps> = ({ isMenuOpen, toggleMenu }) => {
       className="cursor-pointer justify-end md:hidden hover:scale-105  hover:text-white z-30"
       onClick={toggleMenu}
     >
-      <motion.svg
+      <m.svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -31,13 +31,13 @@ const NavToggle: React.FC<NavToggleProps> = ({ isMenuOpen, toggleMenu }) => {
         stroke="currentColor"
         className="w-10 h-10 focus:animate-spin"
       >
-        <motion.path
+        <m.path
           strokeLinecap="round"
           strokeLinejoin="round"
           initial={false}
           animate={controls}
         />
-      </motion.svg>
+      </m.svg>
     </div>
   );
 };

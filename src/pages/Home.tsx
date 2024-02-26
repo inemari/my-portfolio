@@ -11,9 +11,12 @@ function Home() {
     return (
 
         <div className='space-y-20'>
+         
             <Hero />
             <CardGroup items={passions} header='Additional Passions' />
-            <CardGroup items={projects} header='Projects' />
+            <CardGroup items={projects.ux && projects.development} header='Projects' />
+            {/* <CardGroup items={projects.development} header='Projects' /> */}
+
         </div>
     )
 }

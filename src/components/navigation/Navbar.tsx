@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 import NavToggle from "./NavToggle";
+import abstractElement from '../../assets/lottieFiles/AbstractElement.json';
 
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import Logo from "../Logo";
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -101,14 +104,14 @@ const Navbar: React.FC = () => {
 
 
     return (
-        <motion.div
-            className="flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  bg-black "
+        <m.div
+            className="flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  "
             initial="closed"
             animate={isMenuOpen ? "opened" : "closed"}
         >
             {/* Logo*/}
-            <div className="w-1/3 h-full items-start justify-start flex z-10">
-                <img src="/inelogo4.png" alt="" className="h-full aspect-square p-2" />
+            <div className="w-1/3 h-full items-start  justify-start  z-10 ">
+                <Logo />
             </div>
 
             {/* Menu on large screen */}
@@ -127,37 +130,38 @@ const Navbar: React.FC = () => {
             </ul>
 
             {/* Menu items on mobile screen */}
-            {isMenuOpen && (
-                <motion.div
-                    variants={mobileMenuVariant}
-                    className="fixed top-20 right-0 left-0 h-fit lg:bottom-auto -z-30"
-                >
-                    <motion.ul className="md:hidden flex flex-col items-center bg-black justify-center h-full gap-3 p-3" variants={ulVariant}>
-                        {navLinks.map((item) => (
-                            <motion.li
-                                key={item.label}
-                                className={`w-full text-center group ease-in-out transition ${!item.current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo-500"
-                                    }`}>
-                                <Link
-                                    to={item.href}
-                                    className={`font-montserrat leading-normal text-lg text-slate-gray ${item.current ? "font-semibold" : "group-hover:text-black "}`}
-                                    onClick={toggleMenu}>
-                                    <motion.div variants={liVariant}>
-                                        {item.label}
-                                    </motion.div>
-                                </Link>
-                            </motion.li>
-                        ))}
-                    </motion.ul>
-                </motion.div>
-            )
+            {
+                isMenuOpen && (
+                    <m.div
+                        variants={mobileMenuVariant}
+                        className="fixed top-20 right-0 left-0 h-fit lg:bottom-auto -z-30"
+                    >
+                        <m.ul className="md:hidden flex flex-col items-center bg-black justify-center h-full gap-3 p-3" variants={ulVariant}>
+                            {navLinks.map((item) => (
+                                <m.li
+                                    key={item.label}
+                                    className={`w-full text-center group ease-in-out transition ${!item.current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo-500"
+                                        }`}>
+                                    <Link
+                                        to={item.href}
+                                        className={`font-montserrat leading-normal text-lg text-slate-gray ${item.current ? "font-semibold" : "group-hover:text-black "}`}
+                                        onClick={toggleMenu}>
+                                        <m.div variants={liVariant}>
+                                            {item.label}
+                                        </m.div>
+                                    </Link>
+                                </m.li>
+                            ))}
+                        </m.ul>
+                    </m.div>
+                )
             }
 
 
             <NavToggle toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
 
 
-        </motion.div >
+        </m.div >
     );
 };
 

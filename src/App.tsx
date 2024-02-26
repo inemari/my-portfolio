@@ -8,7 +8,9 @@ import Contact from './pages/Contact'
 import animationData from './assets/lottieFiles/Animation - 1707897135994.json'
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { useEffect, useRef, useState } from "react";
-
+import { m } from "framer-motion"
+import { LazyMotion, domAnimation } from "framer-motion"
+import bg from './assets/images/Background 3.png';
 function App() {
   const loadingRef = useRef<LottieRefCurrentProps>(null)
   const [loading, setLoading] = useState(true)
@@ -21,24 +23,26 @@ function App() {
     </div>
   }
   return (
+
     <Router>
-
-      <div className='pb-[90px] '>
-        <Navbar />
-      </div>
-      <div className='items-center h-screen md:m-10 md:mx-32 m-5 justify-center '>
-        <div className='   md:pb-10 pb-5 '>
-          <Routes>
-            <Route path="/"
-              element={<Home />} />
-            <Route path="/Portfolio"
-              element={<Portfolio />} />
-            <Route path="Contact"
-              element={<Contact />} />
-          </Routes>
+      <LazyMotion features={domAnimation}>
+        <m.img src={bg} alt="" className='fixed object-fill w-full h-full -z-10 bg-blend-soft-light opacity-30 scr' />
+        <div className='pb-[90px] '>
+          <Navbar />
         </div>
-      </div>
-
+        <div className='items-center h-screen md:m-10 md:mx-32 m-5 justify-center'>
+          <div className='md:pb-10 pb-5 '>
+            <Routes>
+              <Route path="/"
+                element={<Home />} />
+              <Route path="/Portfolio"
+                element={<Portfolio />} />
+              <Route path="Contact"
+                element={<Contact />} />
+            </Routes>
+          </div>
+        </div>
+      </LazyMotion>
     </Router>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 
 interface NavItemProps {
     href: string;
@@ -30,12 +30,12 @@ const liVariant: Variants = {
 
 const NavItem: React.FC<NavItemProps> = ({ href, label, current, onClick }) => {
     return (
-        <motion.li
+        <m.li
             variants={liVariant}
             className={`w-full text-center group ease-in-out transition ${!current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo-500"
                 }`}
         >
-            <motion.div>
+            <m.div>
                 <Link
                     to={href}
                     className={`font-montserrat leading-normal text-lg text-slate-gray ${current ? "font-semibold" : "group-hover:text-black "
@@ -44,8 +44,8 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, current, onClick }) => {
                 >
                     {label}
                 </Link>
-            </motion.div>
-        </motion.li>
+            </m.div>
+        </m.li>
     );
 };
 

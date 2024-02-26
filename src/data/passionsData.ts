@@ -1,26 +1,24 @@
-import frontendImg from '../assets/images/aigen-computer.jpg';
-
 import testAnimation from '../assets/lottieFiles/Animation - 1707897135994.json';
-import codeAnimation from '../assets/lottieFiles/code-gif.json';
+import codeAnimation from '../assets/lottieFiles/developmentGif.json';
 import uxAnimation from '../assets/lottieFiles/ux-animation.json';
 const passions = [
     {
         id: 1,
-        imageSrc: codeAnimation,
+        cover: codeAnimation,
         title: 'Front-end development',
-        description: '(React, Javascript, Typescript, Bootstrap, Tailwind)',
+        shortDescription: '(React, Javascript, Typescript, Bootstrap, Tailwind)',
     },
     {
         id: 2,
-        imageSrc: uxAnimation,
+        cover: uxAnimation,
         title: 'UX/UI Design',
-        description: '(Figma)',
+        shortDescription: '(Figma)',
     },
     {
         id: 3,
-        imageSrc: testAnimation,
-        title: 'Front-end development',
-        description: '(React, Javascript, Typescript, Bootstrap, Tailwind)',
+        cover: testAnimation,
+        title: 'Graphic design',
+        shortDescription: '(React, Javascript, Typescript, Bootstrap, Tailwind)',
     },
 ];
 
