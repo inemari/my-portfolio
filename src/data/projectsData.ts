@@ -110,7 +110,7 @@ const projects: { ux: ProjectItem[]; development: ProjectItem[] } = {
                 testImage(Math.random()),
                 testImage(Math.random()),
             ],
-            timeStart: 2021,
+            timeStart: [9, 2021],
             timeEnd: null, // Ongoing project
         },
     ],

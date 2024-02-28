@@ -1,10 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { m, Variants } from "framer-motion";
 import NavToggle from "./NavToggle";
-import abstractElement from '../../assets/lottieFiles/AbstractElement.json';
 
-import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import Logo from "../Logo";
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,15 +56,15 @@ const Navbar: React.FC = () => {
         },
     };
 
-    const fadeInVariant: Variants = {
-        opened: {
-            opacity: 1,
-            transition: {
-                delay: 1.2,
-            },
-        },
-        closed: { opacity: 0 },
-    };
+    // const fadeInVariant: Variants = {
+    //     opened: {
+    //         opacity: 1,
+    //         transition: {
+    //             delay: 1.2,
+    //         },
+    //     },
+    //     closed: { opacity: 0 },
+    // };
 
     const ulVariant: Variants = {
         opened: {

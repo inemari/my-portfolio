@@ -1,3 +1,5 @@
+import { AnimationConfigWithData } from "lottie-web";
+
 
 
 type CardItem = {

@@ -6,6 +6,8 @@ export default {
   ],
   theme: {
     extend: {},
+  }, experimental: {
+    unknownAtRules: ['@tailwind base', '@custom2'],
   },
   plugins: [],
 }

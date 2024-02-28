@@ -3,7 +3,6 @@ import CardGroup from '../components/cards/Cardgroup';
 import Hero from '../components/Hero';
 import Projects from '../components/project/Projects';
 import passions from '../data/passionsData';
-import projects from '../data/projectsData';
 
 
 

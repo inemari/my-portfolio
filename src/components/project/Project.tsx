@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { ProjectItem } from '../../data/projectsData';
 import Slideshow from './SlideShow';
 // import laptop from '../assets/images/laptopframe-nobg.png';

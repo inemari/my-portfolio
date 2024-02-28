@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import Lottie, { LottieRefCurrentProps, AnimationConfigWithData } from 'lottie-react';
+import Lottie, { LottieRefCurrentProps } from 'lottie-react';
+import { AnimationConfigWithData } from 'lottie-web';
 
 interface CardMediaProps {
     cover: string | AnimationConfigWithData | React.ReactNode;
@@ -35,7 +36,7 @@ const CardMedia: React.FC<CardMediaProps> = ({ cover, coverAltText }) => {
                     lottieRef={lottieRef}
                     onPointerEnter={() => lottieRef.current?.play()} // Play the animation on pointer enter
                     onPointerLeave={() => lottieRef.current?.pause()} // Pause the animation on pointer leave
-                    animationData={cover as AnimationConfigWithData}
+                    animationData={cover}
                     className="w-full max-w-80 aspect-square p-5 ovject"
                 />
             </a>
