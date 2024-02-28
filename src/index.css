@@ -41,6 +41,11 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,9 +58,9 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
+/* button:hover {
   border-color: #646cff;
-}
+} */
 
 button:focus,
 button:focus-visible {

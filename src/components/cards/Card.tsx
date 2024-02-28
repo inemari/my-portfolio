@@ -1,8 +1,9 @@
 // Card.tsx
 import React, { FC, useState } from 'react';
 import { m } from 'framer-motion';
-import { CardItem } from './CardItem'; // Import the CardItem interface
+
 import CardMedia from './CardMedia';
+import CardItem from '../../data/CardItem';
 
 interface CardProps {
     item: CardItem;

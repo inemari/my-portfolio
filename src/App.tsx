@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route }
 import './App.css'
 import Navbar from './components/navigation/Navbar'
 import Home from './pages/Home'
-import Portfolio from './pages/Portfolio'
+import Portfolio from './pages/Projects/Portfolio'
 import Contact from './pages/Contact'
 import animationData from './assets/lottieFiles/Animation - 1707897135994.json'
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
@@ -26,7 +26,7 @@ function App() {
 
     <Router>
       <LazyMotion features={domAnimation}>
-        <m.img src={bg} alt="" className='fixed object-fill w-full h-full -z-10 bg-blend-soft-light opacity-30 scr' />
+        <m.img src={bg} alt="" className='fixed object-fill w-full h-full -z-10 bg-blend-soft-light opacity-30' />
         <div className='pb-[90px] '>
           <Navbar />
         </div>

@@ -1,7 +1,15 @@
 import testAnimation from '../assets/lottieFiles/Animation - 1707897135994.json';
 import codeAnimation from '../assets/lottieFiles/developmentGif.json';
 import uxAnimation from '../assets/lottieFiles/ux-animation.json';
-const passions = [
+import CardItem from './CardItem';
+
+
+
+interface Passion extends CardItem {
+    extravalue?: string;
+}
+
+const passions: Passion[] = [
     {
         id: 1,
         cover: codeAnimation,
