@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Phone from '../../assets/images/Phoneframe-nobg.png';
+import Phone from '../../assets/images/phoneframe-nobg.png';
 
 interface PhoneFrameProps {
     imageSrc: string;
