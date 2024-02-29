@@ -44,6 +44,22 @@
 
   .laptop-wrapper {
     background-image: url('./assets//images//laptopframe-nobg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    contain-intrinsic-height: calc();
+  }
+
+  .laptop-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip: auto;
+    overflow: hidden;
+
 
   }
 

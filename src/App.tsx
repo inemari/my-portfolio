@@ -30,7 +30,7 @@ function App() {
         <div className='pb-[90px] '>
           <Navbar />
         </div>
-        <div className='items-center h-screen md:m-10 md:mx-32 m-5 justify-center'>
+        <div className='items-center h-screen md:m-10 md:mx-32 m-5 mx-20 m-5 justify-center'>
           <div className='md:pb-10 pb-5 '>
             <Routes>
               <Route path="/"

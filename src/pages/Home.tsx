@@ -10,7 +10,7 @@ function Home() {
 
     return (
 
-        <div className='space-y-20'>
+        <div className='space-y-20 flex justify-center items-center  mx-auto'>
 
             <Hero />
             <CardGroup items={passions} header='Additional Passions' />

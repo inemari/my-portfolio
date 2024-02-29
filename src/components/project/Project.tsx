@@ -12,8 +12,8 @@ interface ProjectProps {
 
 const Project: FC<ProjectProps> = ({ project, index }) => {
     return (
-        <div key={index} className='flex flex-row w-full py-20 justify-evenly items-center '>
-            <div className="w-1/4">
+        <div key={index} className='flex flex-col lg:flex-row w-full justify-center items-center lg:space-y-10 my-auto'>
+            <div className="w-full h-full flex bg-indigo-500 bg-opacity-30  justify-center p-1">1
 
                 <Slideshow images={project.images} phone={project.phone}></Slideshow>
 
@@ -21,10 +21,10 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
                     <Slideshow imageSrc={image}></Slideshow>
                 ))} */}
             </div>
-            <div className='flex flex-col w-2/4'>
+            <div className='flex flex-col w-full'>
                 {/* <img src={project.cover} alt={project.title} className='w-full' /> */}
-                <h1 className="  font-bold py-5 text-white">{project.title}</h1>
-                <p className="text-white text-2xl">{project.longDescription}</p>
+                <h2 className="  font-bold py-5 text-white">{project.title}</h2>
+                <p className="text-white text-lg">{project.longDescription}</p>
             </div>
 
 

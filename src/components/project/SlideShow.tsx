@@ -20,31 +20,31 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone }) => {
     };
 
     return (
-        <div id="controls-carousel" className="relative w-full flex flex-row h-full justify-center items-center" data-carousel="static">
+        <div id="controls-carousel" className=" flex flex-row items-center bg-white bg-opacity-10 w-full h-fit" data-carousel="static">2
             {/* Carousel wrapper */}
 
 
             {/* Slider controls */}
             <CarouselButton onClick={prevSlide} direction="prev" label="Previous" />
 
-            <div className="overflow-visible rounded-lg l">
-                {/* Item 1 */}
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`${index === currentSlide ? 'duration-700 ease-in-out' : 'hidden'
-                            }  block w-fit h-full`}
-                        data-carousel-item
-                    >
-                        {!phone ?
-                            (<LaptopFrame imageSrc={image} altText={`Slide ${index + 1}`} />
-                            )
-                            :
-                            (<PhoneFrame imageSrc={image} altText={`Slide ${index + 1}`} />)
-                        }
-                    </div>
-                ))}
-            </div>
+            {/* <div className="overflow-visible rounded-lg  w-full h-full bg-amber-400 bg-opacity-15">3 */}
+            {/* Item 1 */}
+            {images.map((image, index) => (
+                <div
+                    key={index}
+                    className={`${index === currentSlide ? 'duration-700 ease-in-out' : 'hidden'
+                        } bg-black bg-opacity-20 border-2 border-red-500`}
+                    data-carousel-item
+                >
+                    {!phone ?
+                        (<LaptopFrame imageSrc={image} altText={`Slide ${index + 1}`} />
+                        )
+                        :
+                        (<PhoneFrame imageSrc={image} altText={`Slide ${index + 1}`} />)
+                    }
+                </div>
+            ))}
+            {/* </div> */}
             <CarouselButton onClick={nextSlide} direction="next" label="Next" />
         </div >
     );

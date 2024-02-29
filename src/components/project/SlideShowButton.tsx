@@ -8,8 +8,8 @@ interface SlideShowButtonProps {
 
 const SlideShowButton: React.FC<SlideShowButtonProps> = ({ onClick, direction, label }) => (
     <button
-        type="button"
-        className={`${direction === 'prev' ? 'top-0 start-0' : 'flex'} z-30 cursor-pointer group focus:outline-none `}
+
+        className={`cursor-pointer group focus:outline-none mx-auto`}
         onClick={onClick}
     ><h1>
             {direction === 'prev' && (
