@@ -47,6 +47,7 @@ const Projects = () => {
             <div className='grid grid-flow-row py-10 gap-6'>
                 {/* Display development projects */}
                 {developmentProjects.map((project, i) => (
+
                     <Project key={`dev-${i}`} project={project} index={i}></Project>
                 ))}
                 {/* Display UX projects */}

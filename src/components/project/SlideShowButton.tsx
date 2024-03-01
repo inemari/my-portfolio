@@ -9,13 +9,13 @@ interface SlideShowButtonProps {
 const SlideShowButton: React.FC<SlideShowButtonProps> = ({ onClick, direction, label }) => (
     <button
 
-        className={`cursor-pointer group focus:outline-none mx-auto`}
+        className={`cursor-pointer group focus:outline-none  group-hover:scale-150 `}
         onClick={onClick}
     ><h1>
             {direction === 'prev' && (
-                <MdNavigateNext className=" rotate-180 text-gray-400 group-hover:scale-150" />)}
+                <MdNavigateNext className=" rotate-180 text-gray-400 group-hover:scale-150 " />)}
             {direction === 'next' && (
-                <MdNavigateNext className=" text-gray-400 group-hover:scale-150" />
+                <MdNavigateNext className=" text-gray-400 group-hover:scale-150 " />
             )} <span className="sr-only">{label}</span>
         </h1>
     </button>

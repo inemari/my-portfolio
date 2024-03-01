@@ -12,14 +12,14 @@ interface ProjectProps {
 
 const Project: FC<ProjectProps> = ({ project, index }) => {
     return (
-        <div key={index} className='flex flex-col lg:flex-row w-full justify-center items-center lg:space-y-10 my-auto'>
-            <div className="w-full h-full flex bg-indigo-500 bg-opacity-30  justify-center p-1">1
+        <div key={index} className={`flex flex-col lg:flex-row w-full justify-center items-center lg:space-y-10 my-auto bg-indigo-500 bg-opacity-50 p-5 rounded-2xl ease-in-out `}>
+            <div className={`w-full h-full flex  bg-opacity-30  justify-center p-1 ${index % 2 === 0 ? 'start-0 self-start' : 'end-0 self-end'}`}>
+                <div className={``}>
+                    <Slideshow images={project.images} phone={project.phone}></Slideshow>
 
-                <Slideshow images={project.images} phone={project.phone}></Slideshow>
-
-                {/* {project.images.map((image) => (
+                    {/* {project.images.map((image) => (
                     <Slideshow imageSrc={image}></Slideshow>
-                ))} */}
+                ))} */}</div>
             </div>
             <div className='flex flex-col w-full'>
                 {/* <img src={project.cover} alt={project.title} className='w-full' /> */}
