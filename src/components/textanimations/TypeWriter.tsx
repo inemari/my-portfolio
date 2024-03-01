@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { m } from "framer-motion"
 const DEFAULT_MS = 30;
 
 export interface ITypewriterProps {
@@ -67,14 +67,18 @@ export default function AnimatedText({
     }, [text, currentStringIndex, currentTextIndex, speed, loop, random, delay, cursor, onFinished, onStart, animationCompleted]);
 
     return (
-        <span className={className}>
+        <m.span className={className} variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+            hidden: {}
+        }}
+            initial="hidden">
             {
                 text[currentStringIndex].substring(0, currentTextIndex)
             }
             {cursor && !animationCompleted && (
                 <span>▎</span>
             )}
-        </span>
+        </m.span>
     );
 }
 
