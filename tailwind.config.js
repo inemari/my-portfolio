@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        indigo: '#535bf2',
+      }
+    },
   }, experimental: {
     unknownAtRules: ['@tailwind base', '@custom2'],
   },

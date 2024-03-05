@@ -66,3 +66,8 @@
   .MdNavigateNext {
     border-radius: 40px;
   }
+
+  image-background {
+    background-color: red;
+    position: absolute;
+  }

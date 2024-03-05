@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
                             {navLinks.map((item) => (
                                 <m.li
                                     key={item.label}
-                                    className={`w-full text-center group ease-in-out transition ${!item.current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo-500"
+                                    className={`w-full text-center group ease-in-out transition ${!item.current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo"
                                         }`}>
                                     <Link
                                         to={item.href}

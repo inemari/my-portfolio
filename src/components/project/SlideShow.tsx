@@ -20,7 +20,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone }) => {
     };
 
     return (
-        <div id="controls-carousel" className= {`flex flex-row items-center w-full h-fit `} data-carousel="static">
+        <div id="controls-carousel" className={`flex flex-row items-center w-full h-fit `} data-carousel="static">
             {/* Carousel wrapper */}
 
 

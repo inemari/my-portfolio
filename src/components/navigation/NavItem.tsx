@@ -32,7 +32,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, current, onClick }) => {
     return (
         <m.li
             variants={liVariant}
-            className={`w-full text-center group ease-in-out transition ${!current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo-500"
+            className={`w-full text-center group ease-in-out transition ${!current && "hover:scale-110 hover:-translate-y-1 hover:bg-indigo"
                 }`}
         >
             <m.div>
