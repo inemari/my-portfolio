@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
 
     return (
         <m.div
-            className="flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  "
+            className="bg-black  bg-opacity-80 flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  "
             initial="closed"
             animate={isMenuOpen ? "opened" : "closed"}
         >
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
                 isMenuOpen && (
                     <m.div
                         variants={mobileMenuVariant}
-                        className="fixed top-20 right-0 left-0 h-fit lg:bottom-auto -z-30"
+                        className="sticky top-20 right-0 left-0 h-fit lg:bottom-auto z-50 "
                     >
                         <m.ul className="md:hidden flex flex-col items-center bg-black justify-center h-full gap-3 p-3" variants={ulVariant}>
                             {navLinks.map((item) => (

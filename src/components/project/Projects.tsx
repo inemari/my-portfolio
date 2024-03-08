@@ -28,20 +28,18 @@ const Projects = () => {
     });
 
     return (
-        <section className="bg-primary text-white mx-auto w-full" id="projects">
+        <section className=" text-white mx-auto w-full" id="projects">
             <div className="flex flex-row ">
                 <div className="flex-col w-full mb-5 justify-center items-center text-center flex">
-                    <h1 className=" font-bold mb-5 border-b-[14px] w-[50px] border-indigo-600 pb-2">
+                    <h1 className=" font- mb-5 border-b-[8px] pl-3 w-[50px] border-indigo-600 pb-2">
                         Projects
                     </h1>
 
-                    <p className="pb-5 text-3xl">
-                        These are some of my best projects. I have built these with React,
-                        Typescript and Tailwind CSS. Check them out.
+                    <p className="pb-5 text-xl">
+                        These are some of my best projects...[more text]
                     </p>
                 </div>
 
-                <div className="about-img"></div>
             </div>
 
             <div className='grid grid-flow-row py-10 gap-6'>

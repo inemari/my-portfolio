@@ -34,8 +34,8 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
             <div className={`col-span-4 w-full  items-center  content-center justify-items-center   ${index % 2 === 0 ? 'col-end-4 ' : 'col-start-4 text-end'} `}>
                 {/* <img src={project.cover} alt={project.title} className='w-full' /> */}
 
-                <h2 className="  font-bold py-5 text-white ">{project.title}</h2>
-                <p className="text-white text-lg  ">{project.longDescription}</p>
+                <h3 className="font-medium py-5 text-white ">{project.title}</h3>
+                <p className="text-white text-md  ">{project.longDescription}</p>
             </div>
 
 
