@@ -83,7 +83,7 @@ const projects: { ux: ProjectItem[]; development: ProjectItem[] } = {
             longDescription: "A longer description for the UX project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             cover: testImage(Math.random()),
             images: [
-                mapImg1,
+                // mapImg1,
                 mapImg2,
                 mapImg3,
                 mapImg4,
