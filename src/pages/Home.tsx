@@ -10,9 +10,9 @@ function Home() {
 
     return (
 
-        <div className='space-y-20 flex justify-center items-center flex-col mx-auto'>
-
-            <Hero />
+        <div className='space-y-20 mx-auto flex justify-center items-center flex-col '>
+         
+                <Hero />
             <CardGroup items={passions} header='Additional Passions' />
             {/* <CardGroup items={projects.ux && projects.development} header='Projects' /> */}
             {/* <CardGroup items={projects.development} header='Projects' /> */}

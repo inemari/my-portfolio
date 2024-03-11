@@ -10,14 +10,14 @@ import AnimatedText from "./textanimations/TypeWriter";
 function Hero() {
 
     return (
-        <m.div className="w-full  justify-center flex flex-row mx-auto" initial={{ opacity: 0, scale: 0.5 }}
+        <m.div className="w-full  md:h-[calc((100vh-90px)-80px)] h-[calc((100vh-90px)-40px)] justify-center flex flex-row  items-center" initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}>
             {/* 
             <m.img src={waves} alt="" className='absolute top-0 bottom-0 left-0 right-0 w-full h-full -z-10 ' animate={{ rotateX: [0, 360] }}
                 transition={{ loop: Infinity }} />                      //Waves image animated*/}
 
-            <div className="flex flex-col  text-center  lg:justify-center lg:text-left w-4/6  pr-20">
+            <div className="flex flex-col h-full text-center  lg:justify-center lg:text-left w-4/6  pr-20">
                 <AnimatedText className="text-5xl" text="Hey there! 👋" />
                 {/* <AnimatedText className="font-semibold pb-5 pt-3 text-2xl" text=" I'm Ine;" /> */}
 
@@ -29,9 +29,9 @@ function Hero() {
                     <span className=" text-white rounded-xl px-2 bg-opacity-50 font-semibold">built-in design compass</span>, that's always pointing towards user-friendliness, fueled by my passion and experience in UX-design.
                 </p>
             </div>
-            <m.div className="items-center flex justify-end bg-opacity-80 rounded-full aspect-square w-2/6 "  >
+            <m.div className="items-center flex justify-end rounded-full aspect-square w-2/6 "  >
 
-                <img src={illustration} alt="" className=' aspect-square object-cover rounded-full grayscale' />
+                <img src={illustration} alt="" className=' aspect-square object-cover -z-10 rounded-full grayscale' />
 
             </m.div>
 
