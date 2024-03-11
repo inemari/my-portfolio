@@ -1,7 +1,23 @@
-import mdCover from '../assets/images/project-images/ux/md-phone-w-bg.png';
-import mdImg1 from '../assets/images/project-images/ux/md-v2-screen-1.png';
-import mdImg2 from '../assets/images/project-images/ux/md-v2-screen-2.png';
-import mdImg3 from '../assets/images/project-images/ux/md-v2-screen-3.png';
+import mdCover from '../assets/images/project-images/ux/mealdeal/md-phone-w-bg.png';
+import mdImg1 from '../assets/images/project-images/ux/mealdeal/md-v2-screen-1.png';
+import mdImg2 from '../assets/images/project-images/ux/mealdeal/md-v2-screen-2.png';
+import mdImg3 from '../assets/images/project-images/ux/mealdeal/md-v2-screen-3.png';
+import signify1 from '../assets/images/project-images/signify/signify-1.png';
+import signify2 from '../assets/images/project-images/signify/signify-2.png';
+import signify3 from '../assets/images/project-images/signify/signify-3.png';
+import signify4 from '../assets/images/project-images/signify/signify-4.png';
+import signify5 from '../assets/images/project-images/signify/signify-5.png';
+import mapImg1 from '../assets/images/project-images/map-project/map-project1.png';
+import mapImg2 from '../assets/images/project-images/map-project/map-project2.png';
+import mapImg3 from '../assets/images/project-images/map-project/map-project3.png';
+import mapImg4 from '../assets/images/project-images/map-project/map-project4.png';
+import mapImg5 from '../assets/images/project-images/map-project/map-project5.png';
+import mapImg6 from '../assets/images/project-images/map-project/map-project6.png';
+import mapImg7 from '../assets/images/project-images/map-project/map-project7.png';
+import mapImg8 from '../assets/images/project-images/map-project/map-project8.png';
+import mapImg9 from '../assets/images/project-images/map-project/map-project9.png';
+
+
 import CardItem from './CardItem';
 
 
@@ -14,6 +30,7 @@ export interface ProjectItem extends CardItem {
     liveLink?: string;
     phone?: boolean;
     technologies?: string[];
+    link?: string;
 }
 function testImage(randomNumber: number) {
     return `https://picsum.photos/id/${Math.floor(randomNumber * (600 - 100 + 1)) + 100}/600/1000`
@@ -66,12 +83,15 @@ const projects: { ux: ProjectItem[]; development: ProjectItem[] } = {
             longDescription: "A longer description for the UX project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             cover: testImage(Math.random()),
             images: [
-                testImage(Math.random()),
-                testImage(Math.random()),
-                testImage(Math.random()),
-                testImage(Math.random()),
-                testImage(Math.random()),
-                testImage(Math.random()),
+                mapImg1,
+                mapImg2,
+                mapImg3,
+                mapImg4,
+                mapImg5,
+                mapImg6,
+                mapImg7,
+                mapImg8,
+                mapImg9,
             ],
             timeStart: [1, 2023],
             timeEnd: [5, 2023],
@@ -98,6 +118,19 @@ const projects: { ux: ProjectItem[]; development: ProjectItem[] } = {
         },
         {
             id: 5,
+            title: "Signify",
+            shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
+            longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            cover: testImage(Math.random()),
+            images: [
+                signify1, signify2, signify3, signify4, signify5
+            ],
+            timeStart: [8, 2023],
+            timeEnd: [8, 2023],
+            link: "https://signify-psi.vercel.app/",
+        },
+        {
+            id: 54,
             title: "Nettbasert utleiesystem",
             shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
             longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
