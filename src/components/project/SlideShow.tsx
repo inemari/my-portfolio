@@ -36,12 +36,13 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone }) => {
                         } `}
                     data-carousel-item
                 >
-                    {!phone ?
+                    {/* {!phone ?
                         (<LaptopFrame imageSrc={image} altText={`Slide ${index + 1}`} />
                         )
                         :
                         (<PhoneFrame imageSrc={image} altText={`Slide ${index + 1}`} />)
-                    }
+                    } */}
+                    <img src={image} alt="" className='h-full w-full object-cover rounded-md aspect-video ' />
                 </div>
             ))}
             {/* </div> */}
