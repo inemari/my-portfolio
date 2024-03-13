@@ -20,7 +20,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone }) => {
     };
 
     return (
-        <div id="controls-carousel" className={`flex flex-row items-center w-full h-fit `} data-carousel="static">
+        <div id="controls-carousel" className={`flex flex-row items-center w-full h-fit z-3`} data-carousel="static">
             {/* Carousel wrapper */}
 
 
@@ -42,7 +42,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone }) => {
                         :
                         (<PhoneFrame imageSrc={image} altText={`Slide ${index + 1}`} />)
                     } */}
-                    <img src={image} alt="" className='h-full w-full object-cover rounded-md aspect-video ' />
+                    <img src={image} alt="" className={`h-full w-full object-cover rounded-md ${phone ? 'aspect-square' : 'aspect-video '} `} />
                 </div>
             ))}
             {/* </div> */}

@@ -31,7 +31,7 @@ const Projects = () => {
         <section className=" text-white mx-auto w-full" id="projects">
             <div className="flex flex-row ">
                 <div className="flex-col w-full mb-5 justify-center items-center text-center flex">
-                    <h1 className=" font- mb-5 border-b-[8px] pl-3 w-[50px] border-indigo-600 pb-2">
+                    <h1 className=" font- mb-5 border-b-[8px] pl-3 w-[50px] border-indigo pb-2">
                         Projects
                     </h1>
 

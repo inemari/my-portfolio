@@ -17,13 +17,13 @@ interface ProjectProps {
 const Project: FC<ProjectProps> = ({ project, index }) => {
 
     return (
-        <div key={index} className={` grid md:grid-flow-col grid-flow-row h-full w-full py-32 items-center justify-center bg-opacity-50  rounded-2xl ease-in-out `}>
+        <div key={index} className={` grid md:grid-flow-col grid-flow-row h-full w-full py-32 items-center  justify-center bg-opacity-50  rounded-2xl ease-in-out `}>
 
-            <m.img src={Blob} alt="" className={`w-1/3  absolute h-[60%] col-span-full   -z-40 ${index % 2 === 0 ? 'end-0 me-24 -mb-36' : 'start-0 ms-24 rotate-180'}`} animate={{ x: [0, 100, 0], animationIterationCount: 10 }} />
+            {/* <m.img src={Blob} alt="" className={`w-1/3  absolute h-[60%] col-span-full  ${index % 2 === 0 ? 'end-0 me-24 -mb-36' : 'start-0 ms-24 rotate-180'}`} animate={{ x: [0, 100, 0], animationIterationCount: 10 }} /> */}
 
 
 
-            <div className={` h-full  w-full  col-span-3  ${index % 2 === 0 ? 'md:col-start-4' : 'md:col-end-4'} `}>
+            <div className={` h-full z-10  w-full  col-span-3  ${index % 2 === 0 ? 'md:col-start-4' : 'md:col-end-4'} `}>
 
                 <Slideshow images={project.images} phone={project.phone}></Slideshow>
 
@@ -31,7 +31,7 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
                     <Slideshow imageSrc={image}></Slideshow>
                 ))} */}
             </div>
-            <div className={`col-span-4 w-full  flex flex-col   justify-between ${index % 2 === 0 ? 'md:col-end-4 ' : 'md:col-start-4 md:text-end'} `}>
+            <div className={`col-span-3 w-full  flex flex-col   justify-between ${index % 2 === 0 ? 'md:col-end-4 ' : 'md:col-start-4 md:text-end'} `}>
                 {/* <img src={project.cover} alt={project.title} className='w-full' /> */}
                 <div className='h-full pb-10'>
                     <h3 className=" py-5 text-white font-semibold ">{project.title}</h3>

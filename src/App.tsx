@@ -26,7 +26,7 @@ function App() {
 
     <Router>
       <LazyMotion features={domAnimation}>
-        <m.img src={bg} alt="" className='fixed object-fill w-full h-full -z-10 bg-blend-soft-light opacity-30' />
+        <m.img src={bg} alt="" className='fixed object-fill w-full h-full z-0 bg-blend-soft-light opacity-30' />
         <div className='pb-[90px] '>
           <Navbar />
         </div>
