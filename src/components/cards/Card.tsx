@@ -3,10 +3,12 @@ import React, { FC, useState } from 'react';
 import { m } from 'framer-motion';
 
 import CardMedia from './CardMedia';
-import CardItem from '../../data/CardItem';
+import { Passion } from '../../data/passionsData';
+import UxUiAnimation from '../textanimations/UxUiAnimation';
+
 
 interface CardProps {
-    item: CardItem;
+    item: Passion;
 }
 
 const Card: FC<CardProps> = ({ item }) => {
@@ -24,7 +26,10 @@ const Card: FC<CardProps> = ({ item }) => {
                 <CardMedia cover={item.cover} altText={item.coverAltText ? item.coverAltText : undefined} />
             </div>
             <div className="p-6 text-wrap">
-                <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-50">{item.title}</h5>
+                {item.title.includes('UX') ? (
+                    <UxUiAnimation />
+                ) :
+                    (<h3 className='font-thin mb-2'>{item.title}</h3>)}
                 <p className="mb-4 text-neutral-200">{item.shortDescription}</p>
             </div>
         </m.div>
