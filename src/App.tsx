@@ -26,11 +26,11 @@ function App() {
 
     <Router>
       <LazyMotion features={domAnimation}>
-        <m.img src={bg} alt="" className='fixed object-fill w-full h-full -z-10 bg-blend-soft-light opacity-30' />
+        <m.img src={bg} alt="" className='fixed object-fill w-full h-full z-0 bg-blend-soft-light opacity-30' />
         <div className='pb-[90px] '>
           <Navbar />
         </div>
-        <div className='items-center h-screen md:m-10 md:mx-32  mx-20 m-5 justify-center'>
+        <div className='items-center h-screen md:m-10 md:mx-32  mx-20 m-5 justify-center ease-in-out'>
           <div className='md:pb-10 pb-5 '>
             <Routes>
               <Route path="/"

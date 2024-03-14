@@ -20,7 +20,7 @@ const NavToggle: React.FC<NavToggleProps> = ({ isMenuOpen, toggleMenu }) => {
 
   return (
     <div
-      className="cursor-pointer justify-end md:hidden hover:scale-105  hover:text-white z-30"
+      className="cursor-pointer justify-end md:hidden hover:scale-105  hover:text-white z-11"
       onClick={toggleMenu}
     >
       <m.svg

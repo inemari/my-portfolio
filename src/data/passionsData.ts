@@ -1,16 +1,20 @@
 import { AnimationConfigWithData } from 'lottie-web';
-import testAnimation from '../assets/lottieFiles/Animation-1707897135994.json';
+import uxAnimation from '../assets/lottieFiles/uxGif.json';
 import codeAnimation from '../assets/lottieFiles/developmentGif.json';
-import uxAnimation from '../assets/lottieFiles/ux-animation.json';
-import CardItem from './CardItem';
+import testAnimation from '../assets/lottieFiles/fPN697U7p5.json';
 
 
 
-// interface Passion extends CardItem {
-//     extravalue?: string;
-// }
 
-const passions: CardItem[] = [
+export interface Passion {
+    id: number;
+    title: string
+    shortDescription: string;
+    coverAltText?: string;
+    cover: string | AnimationConfigWithData | React.ReactNode;
+}
+
+const passions: Passion[] = [
     {
         id: 1,
         cover: codeAnimation as unknown as AnimationConfigWithData,
@@ -20,14 +24,20 @@ const passions: CardItem[] = [
     {
         id: 2,
         cover: uxAnimation as unknown as AnimationConfigWithData,
-        title: 'UX/UI Design',
+        title: `UX/UI Design`,
         shortDescription: '(Figma)',
     },
     {
         id: 3,
         cover: testAnimation as unknown as AnimationConfigWithData,
         title: 'Graphic design',
-        shortDescription: '(React, Javascript, Typescript, Bootstrap, Tailwind)',
+        shortDescription: '(Canva, Adobe Express)',
+    },
+    {
+        id: 3,
+        cover: testAnimation as unknown as AnimationConfigWithData,
+        title: 'Photography',
+        shortDescription: '(Fashion photography, Adobe Lightroom, Adobe Photoshop)',
     },
 ];
 

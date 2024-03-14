@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdNavigateNext } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
 interface SlideShowButtonProps {
     onClick: () => void;
     direction: 'prev' | 'next';
@@ -9,13 +9,13 @@ interface SlideShowButtonProps {
 const SlideShowButton: React.FC<SlideShowButtonProps> = ({ onClick, direction, label }) => (
     <button
 
-        className={`cursor-pointer group focus:outline-none  group-hover:scale-150 `}
+        className={`cursor-pointer group focus:outline-none  `}
         onClick={onClick}
     ><h1>
             {direction === 'prev' && (
-                <MdNavigateNext className=" rotate-180 text-gray-400 group-hover:scale-150 " />)}
+                <IoIosArrowForward className=" rotate-180 text-gray-400    group-hover:scale-125   " />)}
             {direction === 'next' && (
-                <MdNavigateNext className=" text-gray-400 group-hover:scale-150 " />
+                <IoIosArrowForward className=" text-gray-400 group-hover:scale-125" />
             )} <span className="sr-only">{label}</span>
         </h1>
     </button>

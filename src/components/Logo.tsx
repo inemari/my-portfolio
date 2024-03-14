@@ -19,7 +19,7 @@ const Logo = () => {
             </div> */}
 
             {/* Content */}
-            <div className="relative z-20 text-center">
+            <div className="relative z-11 text-center">
                 <h1>IB</h1>
             </div></div>
     )

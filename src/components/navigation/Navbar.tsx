@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { m, Variants } from "framer-motion";
 import NavToggle from "./NavToggle";
 
+
 import Logo from "../Logo";
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
 
     const navLinks: NavLink[] = [
         generateNavLink("/", "Home"),
-        generateNavLink("/Portfolio", "Portfolio"),
+        generateNavLink("/Projects", "Projects"),
         generateNavLink("/Contact", "Contact"),
     ];
 
@@ -103,12 +104,12 @@ const Navbar: React.FC = () => {
 
     return (
         <m.div
-            className="bg-black  bg-opacity-80 flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  "
+            className="bg-[#171717] flex w-screen h-[90px] items-center md:justify-start justify-between shadow-sm px-3 fixed top-0  z-20"
             initial="closed"
             animate={isMenuOpen ? "opened" : "closed"}
         >
             {/* Logo*/}
-            <div className="w-1/3 h-full items-start  justify-start  z-10 ">
+            <div className="w-1/3 h-full items-start  justify-start   ">
                 <Logo />
             </div>
 
@@ -132,9 +133,9 @@ const Navbar: React.FC = () => {
                 isMenuOpen && (
                     <m.div
                         variants={mobileMenuVariant}
-                        className="sticky top-20 right-0 left-0 h-fit lg:bottom-auto z-50 "
+                        className=" fixed top-20 right-0 left-0 h-fit lg:bottom-auto  z-20"
                     >
-                        <m.ul className="md:hidden flex flex-col items-center bg-black justify-center h-full gap-3 p-3" variants={ulVariant}>
+                        <m.ul className="md:hidden flex flex-col items-center justify-center h-full gap-3 p-3" variants={ulVariant}>
                             {navLinks.map((item) => (
                                 <m.li
                                     key={item.label}
