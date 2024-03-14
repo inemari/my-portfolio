@@ -1,7 +1,7 @@
 // CardGroup.tsx
 import React from 'react';
 import Card from './Card';
-import CardItem from '../../data/CardItem';
+import CardItem from '../../data/Passion';
 
 
 interface CardGroupProps {

@@ -31,7 +31,7 @@ function Hero() {
             </div>
             <m.div className="items-center flex justify-end rounded-full aspect-square w-2/6 "  >
 
-                <img src={illustration} alt="" className=' aspect-square object-cover -z-10 rounded-full grayscale' />
+                <img src={illustration} alt="" className=' aspect-square object-cover rounded-full grayscale' />
 
             </m.div>
 
