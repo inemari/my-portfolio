@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { m, Variants } from "framer-motion";
 
 interface NavItemProps {
@@ -36,14 +35,14 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, current, onClick }) => {
                 }`}
         >
             <m.div>
-                <Link
-                    to={href}
+                <a
+                    href={href}
                     className={`font-montserrat leading-normal text-lg text-slate-gray ${current ? "font-semibold" : "group-hover:text-black "
                         }`}
                     onClick={onClick}
                 >
                     {label}
-                </Link>
+                </a>
             </m.div>
         </m.li>
     );
