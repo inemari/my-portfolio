@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { m } from "framer-motion"
 import { IoIosArrowDown } from 'react-icons/io';
 import { ProjectItem } from '../../data/projectsData';
+import { FaExternalLinkAlt } from "react-icons/fa";
 type Props = {
     project: ProjectItem;
     index: number;
@@ -10,7 +11,9 @@ type Props = {
 export default function ProjectInfoSection({ project, index }: Props) {
     const [isOpen, setIsOpen] = useState(false)
     const variants = {
-        open: { opacity: 1, x: 0 },
+        open: {
+            opacity: 1, x: 0, transition: { duration: 1 }
+        },
         closed: { opacity: 0, x: "-100%" },
     }
     return (
@@ -32,17 +35,21 @@ export default function ProjectInfoSection({ project, index }: Props) {
 
                     <ul className={`flex flex-row space-x-4 pt-4 `}>
                         {project.technologies?.map((technology) => (
-                            <li className='bg-indigo px-3 py-1 rounded-full text-s'>{technology}</li>))}
-
+                            <li className='bg-indigo px-3 py-1 rounded-full'>{technology}</li>))}
+                        {
+                            project.link && (
+                                <a href={project.link} >
+                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-row items-center">
+                                        Website
+                                        <FaExternalLinkAlt className='pl-2 h-full w-full' />
+                                    </button>
+                                </a>
+                            )
+                        }
                     </ul>
 
                 </div>
             </m.div>
-            {
-                project.link && (
-                    <a href={project.link} ><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/3">
-                        Website
-                    </button></a>)
-            }</>
+        </>
     )
 }

@@ -1,10 +1,10 @@
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { ProjectItem } from '../../data/projectsData';
 import Slideshow from './SlideShow';
-import { m } from 'framer-motion'
+import { m, useAnimation } from 'framer-motion'
 import ProjectInfoSection from './ProjectInfoSection';
-
+import { useInView } from "react-intersection-observer";
 
 // import laptop from '../assets/images/laptopframe-nobg.png';
 interface ProjectProps {
@@ -13,23 +13,44 @@ interface ProjectProps {
 }
 
 
+const squareVariants = {
+    visible: {
+        y: 50,
 
+        transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8
+        }
+    },
+    hidden: {
+        y: 300
+    },
+};
 
 const Project: FC<ProjectProps> = ({ project, index }) => {
     const isEven = index % 2 === 0;
 
 
-
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
     return (
-        <m.div key={index} className={`h-full flex lg:flex-row flex-col z-10 w-full items-center justify-start lg:justify-center rounded-2xl ease-in-out  ${isEven ? 'lg:flex-row-reverse ' : ''}`} >
+        <m.div key={index} className={` snap-center h-[full] flex lg:flex-row flex-col z-10 w-full items-center rounded-2xl  ease-in-out justify-between ${isEven ? 'lg:flex-row-reverse  ' : '  '}`} ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={squareVariants}
+        >
 
-            <div className={` h-full lg:w-1/2 w-full mr-0 ml-auto  ${index % 2 === 0 ? 'lg:col-start-4' : 'lg:col-end-4 end-0 text-end'} `}>
+            <div className={` h-full ${project.phone ? 'lg:w-2/6' : 'lg:min-w-[0%] lg:w-full items-center'}${project.title.includes("Speed") ? 'lg:w-full' : ''}`}>
                 <Slideshow images={project.images} phone={project.phone} alt={project.title}></Slideshow>
-                {/* {isEven && (
-                    <div className='bg-indigo absolute -z-10 w-[calc(43%)]   h-[calc(80%)] -mt-80 right-0 bg-opacity-45 '></div>
-                )} */}
+
             </div>
-            <div className={`flex flex-col w-full  ${project.phone ? 'w-full ' : 'w-full lg:w-1/2 '} ${isEven ? 'lg:pl-14' : 'lg:text-end lg:pr-14 '} `}>
+            <div className={`flex flex-col  ${project.phone ? 'lg:w-4/6 ' : 'lg:min-w-2/6 lg:w-full '} ${!isEven && 'lg:text-end'} `}>
                 <ProjectInfoSection project={project} index={index} />
 
             </div >

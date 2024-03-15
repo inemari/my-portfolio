@@ -8,7 +8,6 @@ import signify2 from '../assets/images/project-images/signify/signify-2.png';
 import signify3 from '../assets/images/project-images/signify/signify-3.png';
 import signify4 from '../assets/images/project-images/signify/signify-4.png';
 import signify5 from '../assets/images/project-images/signify/signify-5.png';
-
 import mapImg1 from '../assets/images/project-images/map-project/map-project1.png';
 import mapImg2 from '../assets/images/project-images/map-project/map-project2.png';
 import mapImg3 from '../assets/images/project-images/map-project/map-project3.png';
@@ -16,6 +15,17 @@ import mapImg4 from '../assets/images/project-images/map-project/map-project4.pn
 import mapImg5 from '../assets/images/project-images/map-project/map-project5.png';
 import flyer from '../assets/images/project-images/promo/flyers.png';
 import nametag from '../assets/images/project-images/promo/nametag.png';
+import speedviewAdmin1 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-1.png';
+import speedviewAdmin2 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-2.png';
+import speedviewAdmin3 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-3.png';
+import speedviewAdmin4 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-4.png';
+import speedviewAdmin5 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-5.png';
+import speedviewAdmin6 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-6.png';
+import speedviewAdmin7 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-7.png';
+import speedviewAdmin8 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-8.png';
+import speedviewAdmin9 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-9.png';
+import speedviewAdmin10 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-10.png';
+import speedviewLogin from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-login.png';
 
 
 export interface ProjectItem {
@@ -62,13 +72,17 @@ const projects = [
         longDescription: "The project focuses on automating and improving administrative tasks related to the speed interview process for Experis' sales team. The goal is to replace manual processes, including creating interview schedules in Excel spreadsheets for clients, with a digital platform. This aims to streamline and improve the interaction between Experis' consultants and their clients, so that all administrative tasks can be easily performed digitally. **In this project, I played a key role as both a Front-End Developer and a Version Control Manager.** As a Front-End Developer, I utilized technologies like React, Tailwind CSS, and TypeScript to develop the user interface for the digital platform. Additionally, I served as the Git Repository Administrator, managing the team's pull requests, performing merges between branches, resolving any merge conflicts, and ensuring smooth deployment of updates.",
         cover: testImage(Math.random()),
         images: [
-            `https://picsum.photos/id/${Math.floor(Math.random() * (600 - 100 + 1)) + 100}/600/1000`,
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
+            speedviewAdmin1,
+            speedviewAdmin2,
+            speedviewAdmin3,
+            speedviewAdmin4,
+            speedviewAdmin5,
+            speedviewAdmin6,
+            speedviewAdmin7,
+            speedviewAdmin8,
+            speedviewAdmin9,
+            speedviewAdmin10,
+            speedviewLogin,
         ],
         timeStart: [11, 2023],
         timeEnd: [2, 2024],
@@ -92,26 +106,26 @@ const projects = [
         technologies: ["HTML", "CSS", "Leaflet", "JavaScript", "Figma"],
         category: 'Programming' && 'UX',
     },
-    {
-        id: 4,
-        title: "HvZ Game Management System",
-        shortDescription: "HvZ Game Management System var et fire-ukers fullstack prosjekt som gikk ut på å utvikle en webapplikasjon for administrering og koordinering av Human vs Zombies-spill.",
-        longDescription: "HvZ Game Management System var et fire-ukers fullstack prosjekt som gikk ut på å utvikle en webapplikasjon for administrering og koordinering av Human vs Zombies-spill. Målet var å tilby spillere et oversiktlig grensesnitt samtidig som administratorer skulle ha verktøy for å opprette, administrere og analysere spillene.",
-        cover: testImage(Math.random()),
-        images: [
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-        ],
-        timeStart: [9, 2023],
-        timeEnd: [10, 2023],
-        technologies: ["React", "Tailwind", "JavaScript", "Figma"],
-        category: 'Programming' && 'UX',
+    // {
+    //     id: 4,
+    //     title: "HvZ Game Management System",
+    //     shortDescription: "HvZ Game Management System var et fire-ukers fullstack prosjekt som gikk ut på å utvikle en webapplikasjon for administrering og koordinering av Human vs Zombies-spill.",
+    //     longDescription: "HvZ Game Management System var et fire-ukers fullstack prosjekt som gikk ut på å utvikle en webapplikasjon for administrering og koordinering av Human vs Zombies-spill. Målet var å tilby spillere et oversiktlig grensesnitt samtidig som administratorer skulle ha verktøy for å opprette, administrere og analysere spillene.",
+    //     cover: testImage(Math.random()),
+    //     images: [
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //     ],
+    //     timeStart: [9, 2023],
+    //     timeEnd: [10, 2023],
+    //     technologies: ["React", "Tailwind", "JavaScript", "Figma"],
+    //     category: 'Programming' && 'UX',
 
-    },
+    // },
     {
         id: 5,
         title: "Signify",
@@ -126,24 +140,24 @@ const projects = [
         link: "https://signify-psi.vercel.app/",
         category: 'Programming' && 'UX',
     },
-    {
-        id: 54,
-        title: "Nettbasert utleiesystem",
-        shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
-        longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        cover: testImage(Math.random()),
-        images: [
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-            testImage(Math.random()),
-        ],
-        timeStart: [9, 2021],
-        timeEnd: null, // Ongoing project
-        category: 'Programming' && 'UX',
-    },
+    // {
+    //     id: 54,
+    //     title: "Nettbasert utleiesystem",
+    //     shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
+    //     longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //     cover: testImage(Math.random()),
+    //     images: [
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //         testImage(Math.random()),
+    //     ],
+    //     timeStart: [9, 2021],
+    //     timeEnd: null, // Ongoing project
+    //     category: 'Programming' && 'UX',
+    // },
 
 
     {
