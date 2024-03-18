@@ -24,7 +24,7 @@ const Projects = () => {
 
 
     return (
-        <m.section className="text-white mx-auto w-full flex h-screen flex-col container2" >
+        <m.section className="text-white mx-auto w-full flex h-screen flex-col" >
             <div className="flex flex-row w-full " >
                 <div className="flex-col w-full mb-5 justify-center items-center text-center flex">
                     <h1 className="font- mb-5 border-b-[8px] pl-3 w-[50px] border-indigo pb-2">
@@ -37,7 +37,7 @@ const Projects = () => {
             <m.div className='flex flex-col h-screen w-full mx-auto ' >
                 {/* Display projects */}
                 {allProjects.map((project, i) => (
-                    <div className='h-full relative w-full my-auto left-0 py-[10%] snap-x ' >
+                    <div className='h-full relative w-full my-auto left-0 py-[8%] ' >
                         <Project key={`project-${i}`} project={project} index={i} /></div>
                 ))}
             </m.div>

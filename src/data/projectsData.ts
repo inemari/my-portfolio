@@ -15,17 +15,17 @@ import mapImg4 from '../assets/images/project-images/map-project/map-project4.pn
 import mapImg5 from '../assets/images/project-images/map-project/map-project5.png';
 import flyer from '../assets/images/project-images/promo/flyers.png';
 import nametag from '../assets/images/project-images/promo/nametag.png';
-import speedviewAdmin1 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-1.png';
-import speedviewAdmin2 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-2.png';
-import speedviewAdmin3 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-3.png';
-import speedviewAdmin4 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-4.png';
-import speedviewAdmin5 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-5.png';
-import speedviewAdmin6 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-6.png';
-import speedviewAdmin7 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-7.png';
-import speedviewAdmin8 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-8.png';
-import speedviewAdmin9 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-9.png';
-import speedviewAdmin10 from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-admin-10.png';
-import speedviewLogin from 'C:/dev/git/portfolio/my-portfolio/src/assets/images/project-images/speedview/speedview-login.png';
+import speedviewAdmin1 from '../assets/images/project-images/speedview/speedview-admin-1.png';
+import speedviewAdmin2 from '../assets/images/project-images/speedview/speedview-admin-2.png';
+import speedviewAdmin3 from '../assets/images/project-images/speedview/speedview-admin-3.png';
+import speedviewAdmin4 from '../assets/images/project-images/speedview/speedview-admin-4.png';
+import speedviewAdmin5 from '../assets/images/project-images/speedview/speedview-admin-5.png';
+import speedviewAdmin6 from '../assets/images/project-images/speedview/speedview-admin-6.png';
+import speedviewAdmin7 from '../assets/images/project-images/speedview/speedview-admin-7.png';
+import speedviewAdmin8 from '../assets/images/project-images/speedview/speedview-admin-8.png';
+import speedviewAdmin9 from '../assets/images/project-images/speedview/speedview-admin-9.png';
+import speedviewAdmin10 from '../assets/images/project-images/speedview/speedview-admin-10.png';
+import speedviewLogin from '../assets/images/project-images/speedview/speedview-login.png';
 
 
 export interface ProjectItem {
