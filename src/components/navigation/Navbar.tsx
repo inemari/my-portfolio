@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { m, Variants } from "framer-motion";
 import NavToggle from "./NavToggle";
 import Logo from "../Logo";

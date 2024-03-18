@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { m } from "framer-motion"
 import { IoIosArrowDown } from 'react-icons/io';
 import { ProjectItem } from '../../data/projectsData';

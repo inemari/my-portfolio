@@ -1,11 +1,12 @@
 // CardGroup.tsx
 import React from 'react';
 import Card from './Card';
-import CardItem from '../../data/Passion';
+import { Passion } from '../../data/passionsData';
+
 
 
 interface CardGroupProps {
-    items: CardItem[];
+    items: Passion[];
     header: string;
 }
 

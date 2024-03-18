@@ -1,13 +1,13 @@
 
-import projects from '../../data/projectsData';
 import Project from '../../components/project/Project';
+import projects from '../../data/projectsData';
 
 function Portfolio() {
-    const developmentProjects = [...projects.development];
-    const uxProjects = [...projects.ux];
+    const developmentProjects = projects;
 
-    // Sorting development projects by end date (latest first)
-    developmentProjects.sort((a, b) => {
+
+    // Sorting projects by end date (latest first)
+    projects.sort((a, b) => {
         const aEndDate = a.timeEnd || [0, 0];
         const bEndDate = b.timeEnd || [0, 0];
         if (aEndDate[1] !== bEndDate[1]) {
@@ -16,15 +16,6 @@ function Portfolio() {
         return bEndDate[0] - aEndDate[0];
     });
 
-    // Sorting UX projects by end date (latest first)
-    uxProjects.sort((a, b) => {
-        const aEndDate = a.timeEnd || [0, 0];
-        const bEndDate = b.timeEnd || [0, 0];
-        if (aEndDate[1] !== bEndDate[1]) {
-            return bEndDate[1] - aEndDate[1];
-        }
-        return bEndDate[0] - aEndDate[0];
-    });
 
     return (
         <section className="bg-primary text-white " id="projects">
@@ -49,7 +40,7 @@ function Portfolio() {
                     <Project key={`dev-${i}`} project={project} index={i}></Project>
                 ))}
                 {/* Display UX projects */}
-                {uxProjects.map((project, i) => (
+                {projects.map((project, i) => (
                     <Project key={`ux-${i}`} project={project} index={i}></Project>
                 ))}
             </div>

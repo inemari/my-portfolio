@@ -1,26 +1,26 @@
-import projects, { ProjectItem } from '../../data/projectsData';
+import projects from '../../data/projectsData';
 import Project from '../../components/project/Project';
 import { m } from "framer-motion"
 
 // import { useInView } from 'react-intersection-observer'; // Import useInView from the correct library
 
-const sortByEndDate = (projects: ProjectItem[]) => {
-    return projects.sort((a, b) => {
-        const aEndDate = a.timeEnd || [0, 0];
-        const bEndDate = b.timeEnd || [0, 0];
-        if (aEndDate[1] !== bEndDate[1]) {
-            return bEndDate[1] - aEndDate[1];
-        }
-        return bEndDate[0] - aEndDate[0];
-    });
-};
+// const sortByEndDate = (projects: ProjectItem[]) => {
+//     return projects.sort((a, b) => {
+//         const aEndDate = a.timeEnd || [0, 0];
+//         const bEndDate = b.timeEnd || [0, 0];
+//         if (aEndDate[1] !== bEndDate[1]) {
+//             return bEndDate[1] - aEndDate[1];
+//         }
+//         return bEndDate[0] - aEndDate[0];
+//     });
+// };
 
 const Projects = () => {
     const developmentProjects = projects.filter(project => project.category === 'Programming');
     const uxProjects = projects.filter(project => project.category === 'UX');
     const otherProjects = projects.filter(project => project.category !== 'UX' && project.category !== 'Programming');
 
-    const allProjects = [...sortByEndDate(developmentProjects), ...sortByEndDate(uxProjects), ...sortByEndDate(otherProjects)];
+    const allProjects = [...(developmentProjects), ...(uxProjects), ...(otherProjects)];
 
 
     return (

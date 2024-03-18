@@ -42,8 +42,8 @@ export interface ProjectItem {
     liveLink?: string;
     phone?: boolean;
     technologies?: string[];
-    link?: string;
-    category?: 'UX' | & 'Programming' | string;
+    link?: string | undefined;
+    category?: 'UX' | & 'Programming' | 'Programming' | string;
 }
 function testImage(randomNumber: number) {
     return `https://picsum.photos/id/${Math.floor(randomNumber * (600 - 100 + 1)) + 100}/600/1000`
@@ -171,7 +171,6 @@ const projects = [
         ],
         timeStart: [2, 2024],
         timeEnd: [2, 2024],
-        category: ['Promotion', 'Design', 'Communication'],
         technologies: ["Canva", "Photo Editing Software", "Poster Design Tools"],
     },
 ]
