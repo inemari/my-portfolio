@@ -1,10 +1,8 @@
 import { AnimationConfigWithData } from 'lottie-web';
 import uxAnimation from '../assets/lottieFiles/uxGif.json';
-import codeAnimation from '../assets/lottieFiles/developmentGif.json';
-import testAnimation from '../assets/lottieFiles/fPN697U7p5.json';
-
-
-
+import codeAnimation from '../assets/lottieFiles/devAnimation.json';
+import camAnimation from '../assets/lottieFiles/camera.json';
+import graphicDesignAnimation from '../assets/lottieFiles/graphicdesign.json';
 
 export interface Passion {
     id: number;
@@ -29,13 +27,13 @@ const passions: Passion[] = [
     },
     {
         id: 3,
-        cover: testAnimation as unknown as AnimationConfigWithData,
+        cover: graphicDesignAnimation as unknown as AnimationConfigWithData,
         title: 'Graphic design',
         shortDescription: '(Canva, Adobe Express)',
     },
     {
         id: 3,
-        cover: testAnimation as unknown as AnimationConfigWithData,
+        cover: camAnimation as unknown as AnimationConfigWithData,
         title: 'Photography',
         shortDescription: '(Fashion photography, Adobe Lightroom, Adobe Photoshop)',
     },

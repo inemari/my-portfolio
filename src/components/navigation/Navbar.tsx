@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { m, Variants } from 
-;
+import { m, Variants } from "framer-motion";
 import NavToggle from "./NavToggle";
 import Logo from "../Logo";
 
@@ -20,7 +19,7 @@ const Navbar: React.FC = () => {
     const navLinks = [
         generateNavLink("#home", "Home"),
         generateNavLink("#projects", "Projects"),
-        // generateNavLink("#Contact", "Contact"),
+        generateNavLink("#Contact", "Contact"),
     ];
 
     const toggleMenu = () => {

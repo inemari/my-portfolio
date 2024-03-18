@@ -26,7 +26,10 @@ import speedviewAdmin8 from '../assets/images/project-images/speedview/speedview
 import speedviewAdmin9 from '../assets/images/project-images/speedview/speedview-admin-9.png';
 import speedviewAdmin10 from '../assets/images/project-images/speedview/speedview-admin-10.png';
 import speedviewLogin from '../assets/images/project-images/speedview/speedview-login.png';
-
+import p1 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (1).png';
+import p2 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (2).png';
+import p3 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (3).png';
+import p4 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (5).png';
 
 export interface ProjectItem {
     id: number;
@@ -35,6 +38,7 @@ export interface ProjectItem {
     coverAltText?: string;
     cover: string | AnimationConfigWithData | React.ReactNode;
     longDescription: string;
+    role?: string;
     images: string[];
     timeStart: number[];
     timeEnd: number[] | null;
@@ -51,10 +55,11 @@ function testImage(randomNumber: number) {
 
 const projects = [
     {
-        id: 2,
+        id: 1,
         title: "MealDeal: Offers and Recipe App",
-        shortDescription: "A mobile application that effectively combines food offers with recipes.",
-        longDescription: "MealDeal is a mobile application that effectively combines food offers with recipes. The project was developed as a start-up project through UiA Nyskapning. The goal was to provide users with an overview of current offers from different grocery stores, while also suggesting recipes based on available discounted items. This made it easy for users to plan meals, create shopping lists, and optimize their grocery shopping.",
+        shortDescription: "MealDeal was an Start-up project initiated through UiA Nyskapning. The project aimed to develop a mobile application that streamlined access to food offers and recipes.",
+        longDescription: "MealDeal was an Start-up project initiated through UiA Nyskapning. The project aimed to develop a mobile application that streamlined access to food offers and recipes. By presenting users with up-to-date discounts from various stores and suggesting recipes based on these deals, MealDeal sought to simplify meal planning and optimize grocery shopping",
+        role: "In this project, my responsibility as a UX designer was to define the app's architecture, screen requirements, and user flow. Subsequently, I developed interactive prototypes tailored for user testing to ensure optimal user experience.",
         cover: mdCover,
         images: [
             mdImg1, mdImg2, mdImg3
@@ -66,10 +71,11 @@ const projects = [
         category: 'UX'
     },
     {
-        id: 3,
+        id: 2,
         title: "Digitalized Speed Interview Service",
-        shortDescription: "The project focuses on automating and improving administrative tasks related to the speed interview process for Experis' sales team.",
-        longDescription: "The project focuses on automating and improving administrative tasks related to the speed interview process for Experis' sales team. The goal is to replace manual processes, including creating interview schedules in Excel spreadsheets for clients, with a digital platform. This aims to streamline and improve the interaction between Experis' consultants and their clients, so that all administrative tasks can be easily performed digitally. **In this project, I played a key role as both a Front-End Developer and a Version Control Manager.** As a Front-End Developer, I utilized technologies like React, Tailwind CSS, and TypeScript to develop the user interface for the digital platform. Additionally, I served as the Git Repository Administrator, managing the team's pull requests, performing merges between branches, resolving any merge conflicts, and ensuring smooth deployment of updates.",
+        shortDescription: "The project aimed to automate and enhance administrative tasks associated with the speed interview process for Experis' sales team. Its objective was to replace manual processes, such as creating interview schedules in Excel spreadsheets for clients, with a digital platform.",
+        longDescription: "The project focused on developing a web application to automate and enhance administrative tasks associated with the speed interview process for Experis' sales team. Its objective was to replace manual processes, such as creating interview schedules in Excel spreadsheets for clients, with a digital platform. This transition was intended to streamline and enhance interaction between Experis' consultants and their clients, facilitating seamless digital performance of all administrative tasks.",
+        role: " In this project, I held dual roles as a Front-End Developer and a Version Control Manager. As a Front-End Developer, I leveraged technologies like React, Tailwind CSS, and TypeScript to develop the user interface for the web application. Additionally, I served as the Git Repository Administrator, overseeing the team's pull requests, conducting merges between branches, resolving any merge conflicts, and ensuring the smooth deployment of updates.",
         cover: testImage(Math.random()),
         images: [
             speedviewAdmin1,
@@ -90,19 +96,18 @@ const projects = [
         category: 'Programming'
     },
     {
-        "id": 56,
-        "title": "Automated Data Flow from National Map Databases to AI Algorithms",
-        "shortDescription": "Contributed to the KartAi research project by automating data retrieval and generation for machine learning.",
-        "longDescription": "As a frontend developer, I played a significant role in developing the website's front-end. This involved using key programming languages such as HTML, CSS, and JavaScript. I utilized the JavaScript library Leaflet to implement maps and map functions on the web interface. Additionally, the CSS framework Bootstrap was employed. As a UX designer, I developed the prototype for a web-based solution for ordering map data, which was to be used for training AI models. I also conducted user testing of the prototype and made necessary revisions based on feedback.",
-        "cover": mapImg3,
-        "images": [mapImg1, mapImg2, mapImg3,
-
-
-
+        id: 3,
+        title: "Automation of data flow from national map databases to AI algorithms.",
+        shortDescription: "The bachelorproject, part of the KartAi research initiative with Tietoevry and Kartverket, aimed to develop a system for retrieving and generating training data for machine learning.",
+        longDescription: "The bachelorproject, part of the KartAi research initiative with Tietoevry and Kartverket, aimed to develop a system for retrieving and generating training data for machine learning. We implemented a backend solution for data management and a frontend web application for user interaction.",
+        role: 'In this project, I held dual roles as both a frontend developer and UX/UI designer. As a frontend developer, I employed JavaScript and Leaflet for map integration, along with HTML, CSS, and Bootstrap CSS. Concurrently, in my UX/UI designer capacity, I led the design process using Figma, conducted user testing, and iteratively refined the design based on feedback, maintaining a user-centric approach throughout the project.',
+        cover: mapImg3,
+        images: [mapImg1, mapImg2, mapImg3,
             mapImg4, mapImg5
         ],
         timeStart: [1, 2023],
         timeEnd: [5, 2023],
+        link: "https://kompetansetorget.uia.no/fullfoerte-oppgaver/automatisering-av-dataflyt-fra-nasjonale-kartbaser-mot-ai-algoritmer",
         technologies: ["HTML", "CSS", "Leaflet", "JavaScript", "Figma"],
         category: 'Programming' && 'UX',
     },
@@ -122,15 +127,16 @@ const projects = [
     //     ],
     //     timeStart: [9, 2023],
     //     timeEnd: [10, 2023],
+    // codeLink: "https://github.com/inemari/HvZ-Frontend",
     //     technologies: ["React", "Tailwind", "JavaScript", "Figma"],
     //     category: 'Programming' && 'UX',
 
     // },
     {
-        id: 5,
+        id: 4,
         title: "Signify",
-        shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
-        longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        shortDescription: "",
+        longDescription: "SignLangTranslator is a signlanguage translation application developed using React, JavaScript, HTML, and CSS. This project was completed within a one-week timeframe during the Experis Academy accelerate period. The application serves as a tool for enhancing sign language skills. Users can input letters or words, and the application translates them into corresponding signs, facilitating effective communication.",
         cover: testImage(Math.random()),
         images: [
             signify1, signify2, signify3, signify4, signify5
@@ -138,33 +144,28 @@ const projects = [
         timeStart: [8, 2023],
         timeEnd: [8, 2023],
         link: "https://signify-psi.vercel.app/",
+        codeLink: 'https://github.com/inemari/SignLangTranslator',
         category: 'Programming' && 'UX',
     },
-    // {
-    //     id: 54,
-    //     title: "Nettbasert utleiesystem",
-    //     shortDescription: "Prosjektet fokuserte på å utvikle en nettside som var dedikert til intern utlån av maskiner og utstyr innenfor bedriften.",
-    //     longDescription: "A longer description for the Nettbasert utleiesystem project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    //     cover: testImage(Math.random()),
-    //     images: [
-    //         testImage(Math.random()),
-    //         testImage(Math.random()),
-    //         testImage(Math.random()),
-    //         testImage(Math.random()),
-    //         testImage(Math.random()),
-    //         testImage(Math.random()),
-    //     ],
-    //     timeStart: [9, 2021],
-    //     timeEnd: null, // Ongoing project
-    //     category: 'Programming' && 'UX',
-    // },
-
-
     {
-        id: 55,
+        id: 6,
+        title: "Signify",
+        shortDescription: "",
+        longDescription: "Pokemon Trainer is a webapplication where a user create a Trainer account, catch Pokémon and view them on their trainer page. , HTML, and CSS. It was developed using ... in a one-week timeframe during the Experis Academy accelerate period.",
+        cover: testImage(Math.random()),
+        images: [p1, p2, p3, p4],
+        timeStart: [8, 2023],
+        timeEnd: [8, 2023],
+        link: "https://signify-psi.vercel.app/",
+        codeLink: 'https://github.com/inemari/SignLangTranslator',
+        category: 'Programming' && 'UX',
+    },
+    {
+        id: 5,
         title: "Promotion and Branding at Career Fairs",
-        shortDescription: "Led promotion and branding efforts for Experis Academy during career days at UiA in Grimstad and Career Week in Kristiansand.",
-        longDescription: "As part of my role, I designed a dynamic presentation for the booth's screen to inform and attract attention. I also created flyers with relevant information, images, personalized QR codes, and other elements to advertise Experis Academy. Additionally, I edited previously captured images of Experis employees to create name tags with their photos and job titles. Furthermore, I crafted a poster to promote a competition-based game at the booth, including game rules and prize presentation.",
+        shortDescription: "Contributed to Experis Academy's promotion during career events at UiA in Grimstad and Career Week in Kristiansand.",
+        longDescription: "Contributed to Experis Academy's promotion during career events at UiA in Grimstad and Career Week in Kristiansand. These events provided opportunities for companies to present their organizations and career prospects to university students.",
+        role: "Played a pivotal role in designing and developing promotional materials at Experis Academy's booth. Responsibilities included creating presentations, flyers, name tags, and posters to effectively communicate Experis Academy's offerings and engage with visiting students.",
         cover: testImage(Math.random()),
         images: [
             nametag, flyer
