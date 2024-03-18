@@ -3,6 +3,8 @@ import { m } from "framer-motion"
 import { IoIosArrowDown } from 'react-icons/io';
 import { ProjectItem } from '../../data/projectsData';
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { Button } from '../Button';
 type Props = {
     project: ProjectItem;
     index: number;
@@ -36,18 +38,25 @@ export default function ProjectInfoSection({ project, index }: Props) {
                     <ul className={`flex flex-row space-x-4 pt-4 `}>
                         {project.technologies?.map((technology) => (
                             <li className='bg-indigo px-3 py-1 rounded-full'>{technology}</li>))}
-                        {
-                            project.link && (
-                                <a href={project.link} >
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex flex-row items-center">
-                                        Website
-                                        <FaExternalLinkAlt className='pl-2 h-full w-full' />
-                                    </button>
-                                </a>
-                            )
-                        }
-                    </ul>
 
+                    </ul>
+                    <div className='flex flex-row gap-6'>
+                        {
+                            project.liveLink && (
+                                <a href={project.liveLink} >
+                                    <Button buttonText='Website'>
+                                        <FaExternalLinkAlt className='pl-2 h-full w-full' />
+                                    </Button>
+                                </a>
+                            )}
+                        {project.codeLink && (
+                            <a href={project.codeLink} >
+                                <Button buttonText='Code'>
+                                    <FaGithub className='pl-2 h-full w-full' />
+                                </Button>
+                            </a>
+                        )
+                        }</div>
                 </div>
             </m.div>
         </>

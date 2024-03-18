@@ -135,7 +135,7 @@ const projects = [
     {
         id: 4,
         title: "Signify",
-        shortDescription: "",
+        shortDescription: "SignLangTranslator is a signlanguage translation application developed using React, JavaScript, HTML, and CSS. ",
         longDescription: "SignLangTranslator is a signlanguage translation application developed using React, JavaScript, HTML, and CSS. This project was completed within a one-week timeframe during the Experis Academy accelerate period. The application serves as a tool for enhancing sign language skills. Users can input letters or words, and the application translates them into corresponding signs, facilitating effective communication.",
         cover: testImage(Math.random()),
         images: [
@@ -143,21 +143,21 @@ const projects = [
         ],
         timeStart: [8, 2023],
         timeEnd: [8, 2023],
-        link: "https://signify-psi.vercel.app/",
+        liveLink: "https://signify-psi.vercel.app/",
         codeLink: 'https://github.com/inemari/SignLangTranslator',
         category: 'Programming' && 'UX',
     },
     {
         id: 6,
-        title: "Signify",
+        title: "Pokemon Trainer",
         shortDescription: "",
-        longDescription: "Pokemon Trainer is a webapplication where a user create a Trainer account, catch Pokémon and view them on their trainer page. , HTML, and CSS. It was developed using ... in a one-week timeframe during the Experis Academy accelerate period.",
+        longDescription: "Pokemon Trainer is a webapplication where a user create a Trainer account, catch Pokémon and view them on their trainer page. It was developed using Angular, Typescript and Tailwind CSS in a one-week timeframe during the Experis Academy accelerate period.",
         cover: testImage(Math.random()),
         images: [p1, p2, p3, p4],
         timeStart: [8, 2023],
         timeEnd: [8, 2023],
-        link: "https://signify-psi.vercel.app/",
-        codeLink: 'https://github.com/inemari/SignLangTranslator',
+        codeLink: 'https://github.com/inemari/pokemonTrainer',
+        liveLink: 'https://pokemon-trainer-wheat.vercel.app/login',
         category: 'Programming' && 'UX',
     },
     {
@@ -172,7 +172,7 @@ const projects = [
         ],
         timeStart: [2, 2024],
         timeEnd: [2, 2024],
-        technologies: ["Canva", "Photo Editing Software", "Poster Design Tools"],
+        technologies: ["Canva", "Adobe Photoshop", "Adobe Express"],
     },
 ]
 export default projects;
