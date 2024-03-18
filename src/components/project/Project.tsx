@@ -1,7 +1,7 @@
 
 import { FC, useEffect } from 'react';
 import { ProjectItem } from '../../data/projectsData';
-import Slideshow from './SlideShow';
+import Slideshow from '../Slideshow/SlideShow';
 import { m, useAnimation } from 'framer-motion'
 import ProjectInfoSection from './ProjectInfoSection';
 import { useInView } from "react-intersection-observer";
@@ -40,15 +40,14 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
         }
     }, [controls, inView]);
     return (
-        <m.div key={index} className={` snap-center h-[full] flex lg:flex-row flex-col z-10 w-full items-center rounded-2xl  ease-in-out justify-between ${isEven ? 'lg:flex-row-reverse  ' : '  '}`} ref={ref}
+        <m.div key={index} className={`  flex lg:flex-row flex-col z-10 w-full items-center my-auto rounded-2xl  ease-in-out justify-between  ${index === 0 ? 'pb-24 snap-end ' : '  h-[90vh] snap-center '}${isEven ? 'lg:flex-row-reverse  ' : '  '}`} ref={ref}
             animate={controls}
             initial="hidden"
             variants={squareVariants}
         >
 
-            <div className={` h-full ${project.phone ? 'lg:w-2/6' : 'lg:min-w-[0%] lg:w-full items-center'}${project.title.includes("Speed") ? 'lg:w-full' : ''}`}>
+            <div className={` h-full bg-red-100 my-1 flex items-center ${project.phone ? 'lg:w-2/6' : 'lg:min-w-[0%] lg:w-full'}${project.title.includes("Speed") ? 'lg:w-full' : ''}`}>
                 <Slideshow images={project.images} phone={project.phone} alt={project.title}></Slideshow>
-
             </div>
             <div className={`flex flex-col  ${project.phone ? 'lg:w-4/6 ' : 'lg:min-w-2/6 lg:w-full '} ${!isEven && 'lg:text-end'} `}>
                 <ProjectInfoSection project={project} index={index} />

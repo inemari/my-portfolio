@@ -12,7 +12,7 @@ interface CardGroupProps {
 
 const CardGroup: React.FC<CardGroupProps> = ({ items, header }) => {
     return (
-        <div className='justify-center items-center flex-col flex space-y-5'>
+        <div className='justify-center items-center flex-col flex space-y-5 snap-center'>
             <h2 className="text-4xl font-bold mb-5 border-b-[5px] border-collapse border-indigo-600 pb-2">
                 {header}
             </h2>

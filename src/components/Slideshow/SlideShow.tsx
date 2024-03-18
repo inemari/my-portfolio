@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SlideShowButton from './SlideShowButton';
 
 import imagePlaceholder from '../../assets/image-placeholder.png';
-import Slide from './Slideshow/SlideImage';
+import Slide from './SlideImage';
 
 interface SlideShowProps {
     images: string[];
@@ -30,7 +30,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone, alt }) => {
 
     return (
         <div className="flex flex-col">
-            <div id="controls-carousel" className="flex flex-row h-full items-center mx-auto justify-center" data-carousel="static">
+            <div id="controls-carousel" className="flex flex-row h-full items-center mx-auto justify-center " data-carousel="static">
                 <SlideShowButton onClick={prevSlide} direction="prev" label="Previous" />
                 <div className="overflow-hidden after:clear-both after:block after:content-['']">
                     {images.map((image, index) => (

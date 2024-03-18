@@ -10,7 +10,7 @@ import AnimatedText from "./textanimations/TypeWriter";
 function Hero() {
 
     return (
-        <m.div className="w-full  md:h-[calc((100vh-90px)-80px)] h-[calc((100vh-90px)-40px)] justify-center flex flex-row  items-center" initial={{ opacity: 0, scale: 0.5 }}
+        <m.div className="w-full  md:h-[calc((100vh-90px)-80px)] h-[calc((100vh-90px)-40px)] justify-center flex flex-row  items-center snap-center" initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}>
             {/* 
