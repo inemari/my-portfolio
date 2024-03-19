@@ -47,7 +47,7 @@ export interface ProjectItem {
     phone?: boolean;
     technologies?: string[];
     link?: string | undefined;
-    category?: 'UX' | & 'Programming' | 'Programming' | string;
+    category?: string[];
 }
 function testImage(randomNumber: number) {
     return `https://picsum.photos/id/${Math.floor(randomNumber * (600 - 100 + 1)) + 100}/600/1000`
@@ -68,7 +68,7 @@ const projects = [
         timeStart: [8, 2022],
         timeEnd: [6, 2023],
         technologies: ["Figma", "Prototyping", "Farge- og visuell design"],
-        category: 'UX'
+        category: ['UX']
     },
     {
         id: 2,
@@ -93,7 +93,7 @@ const projects = [
         timeStart: [11, 2023],
         timeEnd: [2, 2024],
         technologies: ["React", "Tailwind", "TypeScript"],
-        category: 'Programming'
+        category: ['Programming']
     },
     {
         id: 3,
@@ -109,7 +109,7 @@ const projects = [
         timeEnd: [5, 2023],
         link: "https://kompetansetorget.uia.no/fullfoerte-oppgaver/automatisering-av-dataflyt-fra-nasjonale-kartbaser-mot-ai-algoritmer",
         technologies: ["HTML", "CSS", "Leaflet", "JavaScript", "Figma"],
-        category: 'Programming' && 'UX',
+        category: ['Programming', 'UX'],
     },
     // {
     //     id: 4,
@@ -135,8 +135,8 @@ const projects = [
     {
         id: 4,
         title: "Signify",
-        shortDescription: "SignLangTranslator is a signlanguage translation application developed using React, JavaScript, HTML, and CSS. ",
-        longDescription: "SignLangTranslator is a signlanguage translation application developed using React, JavaScript, HTML, and CSS. This project was completed within a one-week timeframe during the Experis Academy accelerate period. The application serves as a tool for enhancing sign language skills. Users can input letters or words, and the application translates them into corresponding signs, facilitating effective communication.",
+        shortDescription: "SignLangTranslator is a sign language translation application developed using React, JavaScript, HTML, and CSS.",
+        longDescription: "SignLangTranslator is a sign language translation application developed using React, JavaScript, HTML, and CSS. This project was completed within a one-week timeframe during the Experis Academy accelerate period. The application serves as a tool for enhancing sign language skills. Users can input letters or words, and the application translates them into corresponding signs, facilitating effective communication.",
         cover: testImage(Math.random()),
         images: [
             signify1, signify2, signify3, signify4, signify5
@@ -145,20 +145,22 @@ const projects = [
         timeEnd: [8, 2023],
         liveLink: "https://signify-psi.vercel.app/",
         codeLink: 'https://github.com/inemari/SignLangTranslator',
-        category: 'Programming' && 'UX',
+        category: ['Programming', 'UX'],
+        role: "As a member of the team, my role involved contributing to the design and development process of the Signify project. I participated in creating user interface elements and ensuring a seamless user experience. Additionally, I collaborated with other team members to implement features and resolve technical challenges."
     },
     {
         id: 6,
         title: "Pokemon Trainer",
-        shortDescription: "",
-        longDescription: "Pokemon Trainer is a webapplication where a user create a Trainer account, catch Pokémon and view them on their trainer page. It was developed using Angular, Typescript and Tailwind CSS in a one-week timeframe during the Experis Academy accelerate period.",
+        shortDescription: "Pokemon Trainer is a web application where a user creates a Trainer account, catches Pokémon, and views them on their trainer page. ",
+        longDescription: "Pokemon Trainer is a web application where a user creates a Trainer account, catches Pokémon, and views them on their trainer page. It was developed using Angular, Typescript, and Tailwind CSS in a one-week timeframe during the Experis Academy accelerate period.",
         cover: testImage(Math.random()),
         images: [p1, p2, p3, p4],
         timeStart: [8, 2023],
         timeEnd: [8, 2023],
         codeLink: 'https://github.com/inemari/pokemonTrainer',
         liveLink: 'https://pokemon-trainer-wheat.vercel.app/login',
-        category: 'Programming' && 'UX',
+        category: ['Programming', 'UX'], // Change category to an array if you want to include multiple categories
+        role: "As a UX designer, I developed the idea for the design and a mockup in Figma. Additionally, I was a frontend developer contributing to the development of the project."
     },
     {
         id: 5,
@@ -172,6 +174,7 @@ const projects = [
         ],
         timeStart: [2, 2024],
         timeEnd: [2, 2024],
+        category: ['Graphic design'],
         technologies: ["Canva", "Adobe Photoshop", "Adobe Express"],
     },
 ]

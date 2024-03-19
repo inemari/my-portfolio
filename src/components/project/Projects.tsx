@@ -3,7 +3,7 @@ import Project from '../../components/project/Project';
 import { m } from "framer-motion"
 import ProjectsHeader from './ProjectsHeader';
 
-// import { useInView } from 'react-intersection-observer'; // Import useInView from the correct library
+// import { useInView } from 'react-intersection-observer'; 
 
 // const sortByEndDate = (projects: ProjectItem[]) => {
 //     return projects.sort((a, b) => {
@@ -17,23 +17,20 @@ import ProjectsHeader from './ProjectsHeader';
 // };
 
 const Projects = () => {
-    const developmentProjects = projects.filter(project => project.category === 'Programming');
-    const uxProjects = projects.filter(project => project.category === 'UX');
-    const otherProjects = projects.filter(project => project.category !== 'UX' && project.category !== 'Programming');
 
-    const allProjects = [...(developmentProjects), ...(uxProjects), ...(otherProjects)];
 
 
     return (
         <m.section className="text-white mx-auto w-full flex h-screen flex-col" >
             <ProjectsHeader />
-            <m.div className='flex flex-col h-screen w-full mx-auto ' >
+            <m.div className='flex flex-col  w-full mx-auto justify-between items-center' >
                 {/* Display projects */}
-                {allProjects.map((project, i) => (
-                    <div className='' >
-                        <Project key={`project-${i}`} project={project} index={i} /></div>
+                {projects.map((project, i) => (
+
+                    <Project key={`project-${i}`} project={project} index={i} />
                 ))}
             </m.div>
+
         </m.section>
     );
 };

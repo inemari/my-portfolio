@@ -1,7 +1,7 @@
 const ProjectsHeader = () => {
     return (
-        <div className="flex-col w-full mb-5 items-center text-center flex  justify-around ">
-            <h1 className="font- mb-5 border-b-[8px] pl-3 w-[50px] border-indigo pb-2 ">
+        <div className="flex-col w-full mb-5 items-center text-center flex  justify-around snap-start pt-32">
+            <h1 className=" mb-5 border-b-[8px] pl-3 w-[50px] border-indigo pb-2 ">
                 Projects
             </h1>
             <p className="pb-5 text-xl">
