@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { ProjectItem } from '../../data/projectsData';
 import Slideshow from '../Slideshow/SlideShow';
 import { m, useAnimation } from 'framer-motion';
