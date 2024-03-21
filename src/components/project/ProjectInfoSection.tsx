@@ -5,6 +5,7 @@ import { ProjectItem } from '../../data/projectsData';
 import { Button } from '../Button';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from "react-icons/io5";
+import React from "react";
 type Props = {
     project: ProjectItem;
     isEven: boolean;
@@ -18,14 +19,25 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
         },
         closed: { opacity: 0, x: "-100%" },
     }
+
+
     return (
         <>
-            <m.div className={` w-full justify-center flex pb-10 cursor-auto text-white z-50 flex-col `}>
-                <div className={`flex items-center justify-between p-1 ${isEven ? ' md:flex-row ' : ' md:flex-row-reverse ml-6'}`}>
-                    <h3 className=" py-5 font-semibold w-full">{project.title}</h3>
-
-
+            <m.div className={` w-full flex pb-10 cursor-auto text-white z-50 flex-col justify-between h-[60%]`}>
+                <div className={`flex flex-col py-5 capitalize ${isEven ? '  text-start ' : 'text-end'}`}>
+                    <h3 className=" font-semibold w-full pb-1">{project.title}</h3>
+                    {project.category && project.category.length > 0 && (
+                        <p className={`text-indigo font-bold whitespace-pre uppercase ${isEven ? 'text-start' : 'text-end'}`}>
+                            {project.category.map((category, index) => (
+                                <React.Fragment key={category}>
+                                    {index > 0 && ' & '}
+                                    {category}
+                                </React.Fragment>
+                            ))}
+                        </p>
+                    )}
                 </div>
+
                 <m.p className=" text-md  " variants={variants}>{project.longDescription}</m.p>
 
 
@@ -49,7 +61,7 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
 
                     <ul className={`flex flex-row space-x-4 pt-4 `}>
                         {project.technologies?.map((technology) => (
-                            <li className='bg-indigo px-3 py-1 rounded-full bg-opacity-25'>{technology}</li>))}
+                            <li className={`bg-indigo bg-opacity-20 px-3 py-1 rounded-full text-white opacity-90`}>{technology}</li>))}
                     </ul>
 
                 </div><div className={`flex flex-row gap-3 py-3 h-f mb-0 items-center  ${isEven ? ' md:flex-row -mr-6' : ' md:flex-row-reverse -ml-6'}`}>

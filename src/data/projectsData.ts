@@ -146,6 +146,7 @@ const projects = [
         liveLink: "https://signify-psi.vercel.app/",
         codeLink: 'https://github.com/inemari/SignLangTranslator',
         category: ['Programming', 'UX'],
+        technologies: ["React", "JavaScript", "HTML", "CSS", "Figma"],
         role: "As a member of the team, my role involved contributing to the design and development process of the Signify project. I participated in creating user interface elements and ensuring a seamless user experience. Additionally, I collaborated with other team members to implement features and resolve technical challenges."
     },
     {
@@ -159,6 +160,7 @@ const projects = [
         timeEnd: [8, 2023],
         codeLink: 'https://github.com/inemari/pokemonTrainer',
         liveLink: 'https://pokemon-trainer-wheat.vercel.app/login',
+        technologies: ["Angular", "Typescript", "Tailwind CSS", "Figma"],
         category: ['Programming', 'UX'], // Change category to an array if you want to include multiple categories
         role: "As a UX designer, I developed the idea for the design and a mockup in Figma. Additionally, I was a frontend developer contributing to the development of the project."
     },

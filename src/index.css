@@ -17,6 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+
 }
 
 
@@ -64,8 +65,7 @@ p {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+
   /* padding: 0.6em 1.2em; */
   font-size: 1em;
   font-weight: 500;

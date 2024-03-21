@@ -1,5 +1,6 @@
   #root {
     scroll-padding-bottom: 20px;
+
   }
 
   .logo {
@@ -66,4 +67,11 @@
   image-background {
     background-color: red;
     position: absolute;
+  }
+
+  .background {
+    background-image: url('./assets/images/bg-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }

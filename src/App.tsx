@@ -19,14 +19,14 @@ function App() {
   }, [])
   if (loading) {
     return <div className="flex justify-center items-center  h-full w-full absolute">
-      <Lottie lottieRef={loadingRef} animationData={animationData} className="items-center justify-center flex h-44"></Lottie>
+      <Lottie lottieRef={loadingRef} animationData={animationData} className="items-center justify-bottom  flex h-44"></Lottie>
     </div>
   }
   return (
     <div id={'home'}>
       <Router >
         <LazyMotion features={domAnimation}>
-          <m.img src={bg} alt="" className='fixed object-fill w-full h-full z-0 bg-blend-soft-light opacity-30' />
+          <m.img src={bg} alt="" className='fixed  w-full h-full z-0 object-bottom opacity-30' />
           <div className='pb-[90px] '>
             <Navbar />
           </div>
