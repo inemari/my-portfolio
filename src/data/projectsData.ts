@@ -99,7 +99,7 @@ const projects = [
         id: 3,
         title: "Automation of data flow from national map databases to AI algorithms.",
         shortDescription: "The bachelorproject, part of the KartAi research initiative with Tietoevry and Kartverket, aimed to develop a system for retrieving and generating training data for machine learning.",
-        longDescription: "The bachelorproject, part of the KartAi research initiative with Tietoevry and Kartverket, aimed to develop a system for retrieving and generating training data for machine learning. We implemented a backend solution for data management and a frontend web application for user interaction.",
+        longDescription: "The bachelorproject, part of the KartAi research initiative with Tietoevry and Kartverket, aimed to develop a system for retrieving and generating training data for machine learning. We implemented a backend solution for data management and a frontend web application for user interaction. Additionally, we crafted prototypes and subjected them to user testing to refine usability. Our project embraced the Scrum methodology for project governance, with Jira employed as our central tool for task administration and coordination.",
         role: 'In this project, I held dual roles as both a frontend developer and UX/UI designer. As a frontend developer, I employed JavaScript and Leaflet for map integration, along with HTML, CSS, and Bootstrap CSS. Concurrently, in my UX/UI designer capacity, I led the design process using Figma, conducted user testing, and iteratively refined the design based on feedback, maintaining a user-centric approach throughout the project.',
         cover: mapImg3,
         images: [mapImg1, mapImg2, mapImg3,

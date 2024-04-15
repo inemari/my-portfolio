@@ -3,24 +3,33 @@ import { BrowserRouter as Router, Routes, Route }
 import './App.css'
 import Navbar from './components/navigation/Navbar'
 import Home from './pages/Home'
-import Portfolio from './pages/Projects/Portfolio'
-import Contact from './pages/Contact'
 import animationData from './assets/lottieFiles/loading2 (1).json'
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { useEffect, useRef, useState } from "react";
 import { m } from "framer-motion"
 import { LazyMotion, domAnimation } from "framer-motion"
 import bg from './assets/images/Background 3.png';
+import ResumePage from "./pages/ResumePage";
 function App() {
-  const loadingRef = useRef<LottieRefCurrentProps>(null)
-  const [loading, setLoading] = useState(true)
+  const loadingRef = useRef<LottieRefCurrentProps>(null);
+  const [loading, setLoading] = useState(true);
+
+
+
+
+
+
   useEffect(() => {
-    setTimeout(() => setLoading(false), 500)
-  }, [])
+    setTimeout(() => setLoading(false), 500);
+
+  }, []);
+
   if (loading) {
-    return <div className="flex justify-center items-center  h-full w-full absolute">
-      <Lottie lottieRef={loadingRef} animationData={animationData} className="items-center justify-bottom  flex h-44"></Lottie>
-    </div>
+    return (
+      <div className="flex justify-center items-center h-full w-full absolute">
+        <Lottie lottieRef={loadingRef} animationData={animationData} className="items-center justify-bottom flex h-44" />
+      </div>
+    );
   }
   return (
     <div id={'home'}>
@@ -35,10 +44,8 @@ function App() {
               <Routes>
                 <Route path="/"
                   element={<Home />} />
-                <Route path="/Portfolio"
-                  element={<Portfolio />} />
-                <Route path="Contact"
-                  element={<Contact />} />
+                <Route path="Resume"
+                  element={<ResumePage />} />
               </Routes>
             </div>
           </div>

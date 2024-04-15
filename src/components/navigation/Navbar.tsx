@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     const navLinks = [
         generateNavLink("#home", "Home"),
         generateNavLink("#projects", "Projects"),
-        // generateNavLink("#Contact", "Contact"),
+        generateNavLink("/Resume", "Resume"),
     ];
 
     const toggleMenu = () => {
