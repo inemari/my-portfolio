@@ -189,6 +189,7 @@ const projects = [
         title: "AMV equipment rental system",
         shortDescription: " The project involved the design and development of an equipment rental application accessible on both mobile devices and PCs, tailored for the company AMV.",
         longDescription: " The project involved the design and development of an equipment rental application accessible on both mobile devices and PCs, tailored for the company AMV.",
+        role: "As a UX designer, my responsibility was to design sketches and prototypes based on requirements and task descriptions. Concurrently, I led frontend development, driving the implementation of designs using HTML, CSS, and JavaScript. Additionally, I took on the responsibility of scrum master, ensuring efficient project management and team coordination.",
         cover: testImage(Math.random()),
         images: [
             amv1, amv2, amv3, amv4, amv5, amv6
