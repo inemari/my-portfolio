@@ -46,7 +46,7 @@ export interface ProjectItem {
     role?: string;
     images: string[];
     timeStart: number[];
-    timeEnd: number[] | null;
+    timeEnd: number[];
     codeLink?: string;
     liveLink?: string;
     phone?: boolean;

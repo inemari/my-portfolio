@@ -6,14 +6,15 @@ import { Button } from '../Button';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from "react-icons/io5";
 import React from "react";
+// import { IoIosArrowDown } from "react-icons/io";
 type Props = {
     project: ProjectItem;
     isEven: boolean;
 }
-let width = window.innerWidth
-    || document.documentElement.clientWidth
-    || document.body.clientWidth;
-const laptop = width < 992;
+// let width = window.innerWidth
+//     || document.documentElement.clientWidth
+//     || document.body.clientWidth;
+// const laptop = width < 992;
 export default function ProjectInfoSection({ project, isEven }: Props) {
     // const [isOpen, setIsOpen] = useState(false)
     const variants = {
@@ -23,7 +24,12 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
         closed: { opacity: 0, x: "-100%" },
     }
 
-
+    const formatDate = (unformattedDate: number[]) => {
+        const [day, month] = unformattedDate;
+        const formattedDay = day < 10 ? `0${day}` : `${day}`;
+        const formattedMonth = month < 10 ? `0${month}` : `${month}`;
+        return `${formattedDay}, ${formattedMonth}`;
+    };
     return (
         <>
             <m.div className={` w-full flex pb-10 cursor-auto text-white z-50 flex-col justify-between md:h-[60%]`}>
@@ -42,26 +48,26 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
                 </div>
 
                 <m.p className=" text-md  " variants={variants}>{project.longDescription}</m.p>
-
-
                 {/* Expand shortdescription to longdescription */}
-                {/* {isOpen ? (
+                {/* {laptop&&(
+                {open ? (
 
                     <m.p className=" text-md  " animate={isOpen ? "open" : "closed"} transition={{ ease: "easeInOut", duration: 2 }} variants={variants}>{project.longDescription}</m.p>
 
                 ) : (<m.p className=" text-md  ">{project.shortDescription}</m.p>)
                 } 
                 <button className=" flex flex-row items-center space-x-2 border-none  cursor-pointer" onClick={() => setIsOpen(isOpen => !isOpen)}  >
-                    <h4>{`Read ${isOpen ? "Less" : "More"}`}</h4>
-                    <IoIosArrowDown className={`${isOpen && 'rotate-180'}`} />
-                </button> */}
-
+                    <h4>{`Read ${open ? "Less" : "More"}`}</h4>
+                    <IoIosArrowDown className={`${open && 'rotate-180'}`} />
+                </button> 
+)} */}
                 <div className='my-3'>
                     <h4>My role</h4>
                     <m.p className="text-md  ">{project.role}</m.p>
                 </div>
                 <div className={`flex flex-col pt-4 gap-3 justify-start  ${isEven ? 'items-start' : ' items-end'}`}>
-                    <p>{project.timeStart} - {project.timeEnd}</p>
+                    <p>{formatDate(project.timeStart)}
+                        - {formatDate(project.timeEnd)}</p>
                     <ul className={`flex flex-row space-x-4 pt-4 `}>
                         {project.technologies?.map((technology) => (
                             <li className={`bg-indigo bg-opacity-20 px-3 py-1 rounded-full text-white opacity-90`}>{technology}</li>))}
