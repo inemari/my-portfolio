@@ -30,7 +30,12 @@ import p1 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (
 import p2 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (2).png';
 import p3 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (3).png';
 import p4 from '../assets/images/project-images/pokemon-catcher/pokemonCatcher (5).png';
-
+import amv1 from '../assets/images/project-images/amv/amv1.png';
+import amv2 from '../assets/images/project-images/amv/amv2.png';
+import amv3 from '../assets/images/project-images/amv/amv3.png';
+import amv4 from '../assets/images/project-images/amv/amv4.png';
+import amv5 from '../assets/images/project-images/amv/amv5.png';
+import amv6 from '../assets/images/project-images/amv/amv6.png';
 export interface ProjectItem {
     id: number;
     title: string;
@@ -178,6 +183,20 @@ const projects = [
         timeEnd: [2, 2024],
         category: ['Graphic design'],
         technologies: ["Canva", "Adobe Photoshop", "Adobe Express"],
+    },
+    {
+        id: 6,
+        title: "AMV equipment rental system",
+        shortDescription: " The project involved the design and development of an equipment rental application accessible on both mobile devices and PCs, tailored for the company AMV.",
+        longDescription: " The project involved the design and development of an equipment rental application accessible on both mobile devices and PCs, tailored for the company AMV.",
+        cover: testImage(Math.random()),
+        images: [
+            amv1, amv2, amv3, amv4, amv5, amv6
+        ],
+        timeStart: [8, 2021],
+        timeEnd: [12, 2021],
+        category: ['Programming', 'UX'],
+        technologies: ["HTML", "CSS", "Figma", "Javascript"],
     },
 ]
 export default projects;

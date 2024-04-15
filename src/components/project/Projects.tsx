@@ -3,19 +3,6 @@ import Project from '../../components/project/Project';
 import { m } from "framer-motion"
 import ProjectsHeader from './ProjectsHeader';
 
-// import { useInView } from 'react-intersection-observer'; 
-
-// const sortByEndDate = (projects: ProjectItem[]) => {
-//     return projects.sort((a, b) => {
-//         const aEndDate = a.timeEnd || [0, 0];
-//         const bEndDate = b.timeEnd || [0, 0];
-//         if (aEndDate[1] !== bEndDate[1]) {
-//             return bEndDate[1] - aEndDate[1];
-//         }
-//         return bEndDate[0] - aEndDate[0];
-//     });
-// };
-
 const Projects = () => {
 
 

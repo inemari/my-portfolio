@@ -10,7 +10,10 @@ type Props = {
     project: ProjectItem;
     isEven: boolean;
 }
-
+let width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+const laptop = width < 992;
 export default function ProjectInfoSection({ project, isEven }: Props) {
     // const [isOpen, setIsOpen] = useState(false)
     const variants = {
@@ -23,7 +26,7 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
 
     return (
         <>
-            <m.div className={` w-full flex pb-10 cursor-auto text-white z-50 flex-col justify-between h-[60%]`}>
+            <m.div className={` w-full flex pb-10 cursor-auto text-white z-50 flex-col justify-between md:h-[60%]`}>
                 <div className={`flex flex-col py-5 capitalize ${isEven ? '  text-start ' : 'text-end'}`}>
                     <h3 className=" font-semibold w-full pb-1">{project.title}</h3>
                     {project.category && project.category.length > 0 && (
@@ -58,7 +61,7 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
                     <m.p className="text-md  ">{project.role}</m.p>
                 </div>
                 <div className={`flex flex-col pt-4 gap-3 justify-start  ${isEven ? 'items-start' : ' items-end'}`}>
-
+                    <p>{project.timeStart} - {project.timeEnd}</p>
                     <ul className={`flex flex-row space-x-4 pt-4 `}>
                         {project.technologies?.map((technology) => (
                             <li className={`bg-indigo bg-opacity-20 px-3 py-1 rounded-full text-white opacity-90`}>{technology}</li>))}

@@ -57,10 +57,10 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
             className={`min-h-[90vh] flex flex-col justify-center items-center ${index === 0 ? 'md:snap-end ' : ' md:snap-center '
                 }`}
             ref={ref}
-            initial="hidden"
+            initial={"md:hidden"}
             variants={isEven ? slideRight : slideLeft}
-            animate={inView ? "visible" : "hidden"} // Animate based on inView
-        >{isEven}
+            animate={inView ? "visible" : "md:hidden"} // Animate based on inView
+        >
             <m.div
                 key={index}
                 className={`flex md:flex-row flex-col h-full z-10 w-full items-center justify-between ${isEven ? ' md:flex-row-reverse ' : ' '

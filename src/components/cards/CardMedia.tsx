@@ -14,7 +14,8 @@ const CardMedia: React.FC<CardMediaProps> = ({ cover, coverAltText }) => {
     useEffect(() => {
         // When the ref has been set, call interaction methods...
         if (lottieRef.current) {
-            lottieRef.current.pause();
+            lottieRef.current.setSpeed(2)
+            lottieRef.current?.play();
         }
     }, [lottieRef]);
 
@@ -34,9 +35,11 @@ const CardMedia: React.FC<CardMediaProps> = ({ cover, coverAltText }) => {
                 <Lottie
                     id="card-animation"
                     lottieRef={lottieRef}
-                    onPointerEnter={() => lottieRef.current?.play()} // Play the animation on pointer enter
-                    onPointerLeave={() => lottieRef.current?.pause()} // Pause the animation on pointer leave
+                    // onPointerEnter={() => lottieRef.current?.play()} // Play the animation on pointer enter
+                    // onPointerLeave={() => lottieRef.current?.pause()} // Pause the animation on pointer leave
                     animationData={cover}
+                    autoPlay={false}
+                    loop={false}
                     className="w-full max-w-80 aspect-square p-5 cursor-default"
                 />
             </a>
