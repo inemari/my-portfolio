@@ -31,7 +31,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone, alt }) => {
     return (
         <div className="flex flex-col">
             <div id="controls-carousel" className="flex flex-row h-full items-center mx-auto justify-center " data-carousel="static">
-                <SlideShowButton onClick={prevSlide} direction="prev" label="Previous" />
+                <SlideShowButton onClick={prevSlide} direction="prev" />
                 <div className="overflow-hidden after:clear-both after:block after:content-['']">
                     {images.map((image, index) => (
                         <Slide
@@ -46,7 +46,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images, phone, alt }) => {
                         />
                     ))}
                 </div>
-                <SlideShowButton onClick={nextSlide} direction="next" label="Next" />
+                <SlideShowButton onClick={nextSlide} direction="next" />
             </div>
 
             <div className="right-0 mx-[15%] mb-1 flex list-none justify-center p-0 z-40" data-twe-carousel-indicators>

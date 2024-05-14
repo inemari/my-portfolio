@@ -23,7 +23,7 @@ function App() {
     </div>
   }
   return (
-    <div id={'home'}>
+    <div id="home" className='size-full justify-center app-bg bg-light dark:bg-dark dark:text-white text-primary-900' >
       <Router >
         <LazyMotion features={domAnimation}>
           <m.img src={bg} alt="" className='fixed w-full h-full z-0 object-bottom opacity-30' />

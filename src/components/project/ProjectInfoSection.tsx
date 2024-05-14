@@ -6,15 +6,12 @@ import { Button } from '../Button';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from "react-icons/io5";
 import React from "react";
-// import { IoIosArrowDown } from "react-icons/io";
+
 type Props = {
     project: ProjectItem;
     isEven: boolean;
 }
-// let width = window.innerWidth
-//     || document.documentElement.clientWidth
-//     || document.body.clientWidth;
-// const laptop = width < 992;
+
 export default function ProjectInfoSection({ project, isEven }: Props) {
     // const [isOpen, setIsOpen] = useState(false)
     const variants = {
