@@ -6,15 +6,12 @@ import { Button } from '../Button';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from "react-icons/io5";
 import React from "react";
-// import { IoIosArrowDown } from "react-icons/io";
+
 type Props = {
     project: ProjectItem;
     isEven: boolean;
 }
-// let width = window.innerWidth
-//     || document.documentElement.clientWidth
-//     || document.body.clientWidth;
-// const laptop = width < 992;
+
 export default function ProjectInfoSection({ project, isEven }: Props) {
     // const [isOpen, setIsOpen] = useState(false)
     const variants = {
@@ -76,18 +73,18 @@ export default function ProjectInfoSection({ project, isEven }: Props) {
                 </div><div className={`flex flex-row gap-3 py-3 h-f mb-0 items-center  ${isEven ? ' md:flex-row -mr-6' : ' md:flex-row-reverse -ml-6'}`}>
                     {
                         project.liveLink && (
-                            <Button buttonText='Website' link={project.liveLink}>
+                            <Button buttonText='Website' link={project.liveLink} arrow={true}>
                                 <FaExternalLinkAlt />
                             </Button>
                         )}
                     {project.codeLink && (
-                        <Button buttonText='Code' link={project.codeLink}>
+                        <Button buttonText='Code' link={project.codeLink} arrow={true}>
                             <FaGithub />
                         </Button>
                     )
                     }
                     {project.link && (
-                        <Button buttonText='Bachelor Thesis' link={project.link}>
+                        <Button buttonText='Bachelor Thesis' link={project.link} arrow={true}>
                             <IoDocumentText />
                         </Button>
                     )

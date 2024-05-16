@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import { m } from "framer-motion"
 import { LazyMotion, domAnimation } from "framer-motion"
 import bg from './assets/images/Background 3.png';
+import DarkModeToggle from "./components/DarkModeToggle";
 function App() {
   const loadingRef = useRef<LottieRefCurrentProps>(null)
   const [loading, setLoading] = useState(true)
@@ -23,14 +24,15 @@ function App() {
     </div>
   }
   return (
-    <div id={'home'}>
+    <div id="home" className='size-full justify-center app-bg bg-light dark:bg-dark dark:text-white text-primary-900' >
       <Router >
         <LazyMotion features={domAnimation}>
           <m.img src={bg} alt="" className='fixed w-full h-full z-0 object-bottom opacity-30' />
           <div className='pb-[90px] '>
             <Navbar />
           </div>
-          <div className='items-center h-screen md:m-10 md:mx-32  mx-20 m-5 justify-center ease-in-out 2'>
+          <div className="fixed top-6 right-10 z-50"><DarkModeToggle /></div>
+          <div className='items-center h-screen md:m-10 md:mx-32  mx-20 m-5 justify-center ease-in-out '>
             <div className='md:pb-10 pb-5 '>
               <Routes>
                 <Route path="/"
